@@ -1,5 +1,9 @@
 # SSHGuard v2.0 — Advanced Defensive SSH & System Monitor
 
+
+<img width="1174" height="682" alt="Screenshot 2026-05-30 alle 21 14 17" src="https://github.com/user-attachments/assets/8fccfbf6-b36d-483a-a079-be9bf5489d0c" />
+
+
 A multi-module, professional-grade Python security tool for defensive monitoring
 of SSH agent activity, suspicious processes, network anomalies, file integrity,
 privilege escalation vectors, and lateral movement indicators.
