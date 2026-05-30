@@ -1,0 +1,3486 @@
+{
+  "host": "Mac.station",
+  "user": "francescodichiara",
+  "os": "Darwin 25.4.0",
+  "started_at": "2026-05-30T20:27:38.596238",
+  "duration_sec": 15.13,
+  "threat_level": "CRITICAL",
+  "stats": {
+    "total": 55,
+    "critical": 2,
+    "high": 53,
+    "medium": 0,
+    "low": 0,
+    "score": 3380
+  },
+  "alerts": [
+    {
+      "title": "SSH Agent Socket Hijack \u2014 Listeners",
+      "description": "Socket '/var/run/com.apple.launchd.XP62C2YaN9/Listeners' (owner: francescodichiara) is being accessed by 47 concurrent processes: PIDs [400, 581, 589, 608, 612, 615] (loginwind, distnoted, UserEvent, rapportd). This is the signature of SSH agent hijacking / credential theft.",
+      "severity": "CRITICAL",
+      "category": "SSH_HIJACK",
+      "technique": "T1563.001 \u2014 Remote Service Session Hijacking: SSH Hijacking",
+      "source": "ssh_monitor",
+      "pid": 400,
+      "path": "/var/run/com.apple.launchd.XP62C2YaN9/Listeners",
+      "extra": {},
+      "timestamp": "2026-05-30T20:27:39.045929",
+      "id": "509478e0326b",
+      "score": 100,
+      "dismissed": false,
+      "category_label": "SSH Hijacking",
+      "technique_url": "https://attack.mitre.org/techniques/T1563/001/"
+    },
+    {
+      "title": "SSH Agent Socket Hijack \u2014 s.coeWVMlEmb.agent.XQ7bnJPmyx",
+      "description": "Socket '/Users/francescodichiara/.ssh/agent/s.coeWVMlEmb.agent.XQ7bnJPmyx' (owner: francescodichiara) is being accessed by 47 concurrent processes: PIDs [400, 581, 589, 608, 612, 615] (loginwind, distnoted, UserEvent, rapportd). This is the signature of SSH agent hijacking / credential theft.",
+      "severity": "CRITICAL",
+      "category": "SSH_HIJACK",
+      "technique": "T1563.001 \u2014 Remote Service Session Hijacking: SSH Hijacking",
+      "source": "ssh_monitor",
+      "pid": 400,
+      "path": "/Users/francescodichiara/.ssh/agent/s.coeWVMlEmb.agent.XQ7bnJPmyx",
+      "extra": {},
+      "timestamp": "2026-05-30T20:27:39.085221",
+      "id": "d7bb9fd7fdda",
+      "score": 100,
+      "dismissed": false,
+      "category_label": "SSH Hijacking",
+      "technique_url": "https://attack.mitre.org/techniques/T1563/001/"
+    },
+    {
+      "title": "High-Risk SSH Agent Socket",
+      "description": "Socket '/var/run/mDNSResponder' owned by root (uid=0) or in suspicious location. Root-owned agent sockets can be leveraged for privilege escalation.",
+      "severity": "HIGH",
+      "category": "SSH_HIJACK",
+      "technique": "T1552.004 \u2014 Unsecured Credentials: Private Keys",
+      "source": "ssh_monitor",
+      "pid": null,
+      "path": "/var/run/mDNSResponder",
+      "extra": {},
+      "timestamp": "2026-05-30T20:27:38.653428",
+      "id": "720044cd6116",
+      "score": 60,
+      "dismissed": false,
+      "category_label": "SSH Hijacking",
+      "technique_url": "https://attack.mitre.org/techniques/T1552/004/"
+    },
+    {
+      "title": "High-Risk SSH Agent Socket",
+      "description": "Socket '/var/run/syslog' owned by root (uid=0) or in suspicious location. Root-owned agent sockets can be leveraged for privilege escalation.",
+      "severity": "HIGH",
+      "category": "SSH_HIJACK",
+      "technique": "T1552.004 \u2014 Unsecured Credentials: Private Keys",
+      "source": "ssh_monitor",
+      "pid": null,
+      "path": "/var/run/syslog",
+      "extra": {},
+      "timestamp": "2026-05-30T20:27:38.693190",
+      "id": "08f7139f5b8e",
+      "score": 60,
+      "dismissed": false,
+      "category_label": "SSH Hijacking",
+      "technique_url": "https://attack.mitre.org/techniques/T1552/004/"
+    },
+    {
+      "title": "High-Risk SSH Agent Socket",
+      "description": "Socket '/var/run/vpncontrol.sock' owned by root (uid=0) or in suspicious location. Root-owned agent sockets can be leveraged for privilege escalation.",
+      "severity": "HIGH",
+      "category": "SSH_HIJACK",
+      "technique": "T1552.004 \u2014 Unsecured Credentials: Private Keys",
+      "source": "ssh_monitor",
+      "pid": null,
+      "path": "/var/run/vpncontrol.sock",
+      "extra": {},
+      "timestamp": "2026-05-30T20:27:38.732585",
+      "id": "501d656d7683",
+      "score": 60,
+      "dismissed": false,
+      "category_label": "SSH Hijacking",
+      "technique_url": "https://attack.mitre.org/techniques/T1552/004/"
+    },
+    {
+      "title": "High-Risk SSH Agent Socket",
+      "description": "Socket '/var/run/cupsd' owned by root (uid=0) or in suspicious location. Root-owned agent sockets can be leveraged for privilege escalation.",
+      "severity": "HIGH",
+      "category": "SSH_HIJACK",
+      "technique": "T1552.004 \u2014 Unsecured Credentials: Private Keys",
+      "source": "ssh_monitor",
+      "pid": null,
+      "path": "/var/run/cupsd",
+      "extra": {},
+      "timestamp": "2026-05-30T20:27:38.771624",
+      "id": "7c9bc8c3d310",
+      "score": 60,
+      "dismissed": false,
+      "category_label": "SSH Hijacking",
+      "technique_url": "https://attack.mitre.org/techniques/T1552/004/"
+    },
+    {
+      "title": "High-Risk SSH Agent Socket",
+      "description": "Socket '/var/run/pppconfd' owned by root (uid=0) or in suspicious location. Root-owned agent sockets can be leveraged for privilege escalation.",
+      "severity": "HIGH",
+      "category": "SSH_HIJACK",
+      "technique": "T1552.004 \u2014 Unsecured Credentials: Private Keys",
+      "source": "ssh_monitor",
+      "pid": null,
+      "path": "/var/run/pppconfd",
+      "extra": {},
+      "timestamp": "2026-05-30T20:27:38.811017",
+      "id": "b8264f62bad2",
+      "score": 60,
+      "dismissed": false,
+      "category_label": "SSH Hijacking",
+      "technique_url": "https://attack.mitre.org/techniques/T1552/004/"
+    },
+    {
+      "title": "High-Risk SSH Agent Socket",
+      "description": "Socket '/var/run/portmap.socket' owned by root (uid=0) or in suspicious location. Root-owned agent sockets can be leveraged for privilege escalation.",
+      "severity": "HIGH",
+      "category": "SSH_HIJACK",
+      "technique": "T1552.004 \u2014 Unsecured Credentials: Private Keys",
+      "source": "ssh_monitor",
+      "pid": null,
+      "path": "/var/run/portmap.socket",
+      "extra": {},
+      "timestamp": "2026-05-30T20:27:38.849910",
+      "id": "34b2da3bbf92",
+      "score": 60,
+      "dismissed": false,
+      "category_label": "SSH Hijacking",
+      "technique_url": "https://attack.mitre.org/techniques/T1552/004/"
+    },
+    {
+      "title": "High-Risk SSH Agent Socket",
+      "description": "Socket '/var/run/systemkeychaincheck.socket' owned by root (uid=0) or in suspicious location. Root-owned agent sockets can be leveraged for privilege escalation.",
+      "severity": "HIGH",
+      "category": "SSH_HIJACK",
+      "technique": "T1552.004 \u2014 Unsecured Credentials: Private Keys",
+      "source": "ssh_monitor",
+      "pid": null,
+      "path": "/var/run/systemkeychaincheck.socket",
+      "extra": {},
+      "timestamp": "2026-05-30T20:27:38.889050",
+      "id": "e2aab12a7b82",
+      "score": 60,
+      "dismissed": false,
+      "category_label": "SSH Hijacking",
+      "technique_url": "https://attack.mitre.org/techniques/T1552/004/"
+    },
+    {
+      "title": "High-Risk SSH Agent Socket",
+      "description": "Socket '/var/run/usbmuxd' owned by root (uid=0) or in suspicious location. Root-owned agent sockets can be leveraged for privilege escalation.",
+      "severity": "HIGH",
+      "category": "SSH_HIJACK",
+      "technique": "T1552.004 \u2014 Unsecured Credentials: Private Keys",
+      "source": "ssh_monitor",
+      "pid": null,
+      "path": "/var/run/usbmuxd",
+      "extra": {},
+      "timestamp": "2026-05-30T20:27:38.928515",
+      "id": "aae893ece646",
+      "score": 60,
+      "dismissed": false,
+      "category_label": "SSH Hijacking",
+      "technique_url": "https://attack.mitre.org/techniques/T1552/004/"
+    },
+    {
+      "title": "High-Risk SSH Agent Socket",
+      "description": "Socket '/var/run/.sim_diagnosticd_socket' owned by root (uid=0) or in suspicious location. Root-owned agent sockets can be leveraged for privilege escalation.",
+      "severity": "HIGH",
+      "category": "SSH_HIJACK",
+      "technique": "T1552.004 \u2014 Unsecured Credentials: Private Keys",
+      "source": "ssh_monitor",
+      "pid": null,
+      "path": "/var/run/.sim_diagnosticd_socket",
+      "extra": {},
+      "timestamp": "2026-05-30T20:27:38.967462",
+      "id": "efb0a7bdcdb2",
+      "score": 60,
+      "dismissed": false,
+      "category_label": "SSH Hijacking",
+      "technique_url": "https://attack.mitre.org/techniques/T1552/004/"
+    },
+    {
+      "title": "Suspicious Process: Core Audio Driver (ParrotAudioPlugin.driver) (PID 479)",
+      "description": "Process 'Core Audio Driver (ParrotAudioPlugin.driver)' (PID 479, user '_coreaudiod') flagged: Possible process name masquerade. Command: Core Audio Driver (ParrotAudioPlugin.driver)",
+      "severity": "HIGH",
+      "category": "SUSPICIOUS_PROCESS",
+      "technique": "T1036 \u2014 Masquerading",
+      "source": "process_monitor",
+      "pid": 479,
+      "path": null,
+      "extra": {},
+      "timestamp": "2026-05-30T20:27:40.952610",
+      "id": "3ed05d6d4df0",
+      "score": 60,
+      "dismissed": false,
+      "category_label": "Suspicious Process",
+      "technique_url": "https://attack.mitre.org/techniques/T1036/"
+    },
+    {
+      "title": "Suspicious Process: /System/Library/CoreServices/Software Update.app/Contents/Resources/suhelperd (PID 552)",
+      "description": "Process '/System/Library/CoreServices/Software Update.app/Contents/Resources/suhelperd' (PID 552, user 'root') flagged: Possible process name masquerade. Command: /System/Library/CoreServices/Software Update.app/Contents/Resources/suhelperd",
+      "severity": "HIGH",
+      "category": "SUSPICIOUS_PROCESS",
+      "technique": "T1036 \u2014 Masquerading",
+      "source": "process_monitor",
+      "pid": 552,
+      "path": null,
+      "extra": {},
+      "timestamp": "2026-05-30T20:27:40.953915",
+      "id": "9524fac9acb9",
+      "score": 60,
+      "dismissed": false,
+      "category_label": "Suspicious Process",
+      "technique_url": "https://attack.mitre.org/techniques/T1036/"
+    },
+    {
+      "title": "Suspicious Process: /System/Library/CoreServices/Software Update.app/Contents/Resources/softwareupdated (PID 556)",
+      "description": "Process '/System/Library/CoreServices/Software Update.app/Contents/Resources/softwareupdated' (PID 556, user '_softwareupdate') flagged: Possible process name masquerade. Command: /System/Library/CoreServices/Software Update.app/Contents/Resources/softwareupdated",
+      "severity": "HIGH",
+      "category": "SUSPICIOUS_PROCESS",
+      "technique": "T1036 \u2014 Masquerading",
+      "source": "process_monitor",
+      "pid": 556,
+      "path": null,
+      "extra": {},
+      "timestamp": "2026-05-30T20:27:40.954038",
+      "id": "3711b0eb2574",
+      "score": 60,
+      "dismissed": false,
+      "category_label": "Suspicious Process",
+      "technique_url": "https://attack.mitre.org/techniques/T1036/"
+    },
+    {
+      "title": "Suspicious Process: /System/Library/Input Methods/PressAndHold.app/Contents/PlugIns/PAH_Extension.appex/Contents/MacOS/PAH_Extension (PID 732)",
+      "description": "Process '/System/Library/Input Methods/PressAndHold.app/Contents/PlugIns/PAH_Extension.appex/Contents/MacOS/PAH_Extension' (PID 732, user 'francescodichiara') flagged: Possible process name masquerade. Command: /System/Library/Input Methods/PressAndHold.app/Contents/PlugIns/PAH_Extension.appex/Contents/MacOS/PAH_Extension -App...",
+      "severity": "HIGH",
+      "category": "SUSPICIOUS_PROCESS",
+      "technique": "T1036 \u2014 Masquerading",
+      "source": "process_monitor",
+      "pid": 732,
+      "path": null,
+      "extra": {},
+      "timestamp": "2026-05-30T20:27:40.958283",
+      "id": "12b0d236621d",
+      "score": 60,
+      "dismissed": false,
+      "category_label": "Suspicious Process",
+      "technique_url": "https://attack.mitre.org/techniques/T1036/"
+    },
+    {
+      "title": "Suspicious Process: /System/Library/Image Capture/Support/icdd (PID 746)",
+      "description": "Process '/System/Library/Image Capture/Support/icdd' (PID 746, user 'francescodichiara') flagged: Possible process name masquerade. Command: /System/Library/Image Capture/Support/icdd",
+      "severity": "HIGH",
+      "category": "SUSPICIOUS_PROCESS",
+      "technique": "T1036 \u2014 Masquerading",
+      "source": "process_monitor",
+      "pid": 746,
+      "path": null,
+      "extra": {},
+      "timestamp": "2026-05-30T20:27:40.958605",
+      "id": "c370bb6266c6",
+      "score": 60,
+      "dismissed": false,
+      "category_label": "Suspicious Process",
+      "technique_url": "https://attack.mitre.org/techniques/T1036/"
+    },
+    {
+      "title": "Suspicious Process: /Applications/Spotify.app/Contents/Frameworks/Spotify Helper.app/Contents/MacOS/Spotify Helper (PID 778)",
+      "description": "Process '/Applications/Spotify.app/Contents/Frameworks/Spotify Helper.app/Contents/MacOS/Spotify Helper' (PID 778, user 'francescodichiara') flagged: Possible process name masquerade. Command: /Applications/Spotify.app/Contents/Frameworks/Spotify Helper.app/Contents/MacOS/Spotify Helper --monitor-self-annotat...",
+      "severity": "HIGH",
+      "category": "SUSPICIOUS_PROCESS",
+      "technique": "T1036 \u2014 Masquerading",
+      "source": "process_monitor",
+      "pid": 778,
+      "path": null,
+      "extra": {},
+      "timestamp": "2026-05-30T20:27:40.959341",
+      "id": "8ee74aa3e5eb",
+      "score": 60,
+      "dismissed": false,
+      "category_label": "Suspicious Process",
+      "technique_url": "https://attack.mitre.org/techniques/T1036/"
+    },
+    {
+      "title": "Suspicious Process: /Applications/Spotify.app/Contents/Frameworks/Spotify Helper.app/Contents/MacOS/Spotify Helper (PID 782)",
+      "description": "Process '/Applications/Spotify.app/Contents/Frameworks/Spotify Helper.app/Contents/MacOS/Spotify Helper' (PID 782, user 'francescodichiara') flagged: Possible process name masquerade. Command: /Applications/Spotify.app/Contents/Frameworks/Spotify Helper.app/Contents/MacOS/Spotify Helper --type=gpu-process --s...",
+      "severity": "HIGH",
+      "category": "SUSPICIOUS_PROCESS",
+      "technique": "T1036 \u2014 Masquerading",
+      "source": "process_monitor",
+      "pid": 782,
+      "path": null,
+      "extra": {},
+      "timestamp": "2026-05-30T20:27:40.959566",
+      "id": "c6d10d67bb68",
+      "score": 60,
+      "dismissed": false,
+      "category_label": "Suspicious Process",
+      "technique_url": "https://attack.mitre.org/techniques/T1036/"
+    },
+    {
+      "title": "Suspicious Process: /Applications/Spotify.app/Contents/Frameworks/Spotify Helper.app/Contents/MacOS/Spotify Helper (PID 783)",
+      "description": "Process '/Applications/Spotify.app/Contents/Frameworks/Spotify Helper.app/Contents/MacOS/Spotify Helper' (PID 783, user 'francescodichiara') flagged: Possible process name masquerade. Command: /Applications/Spotify.app/Contents/Frameworks/Spotify Helper.app/Contents/MacOS/Spotify Helper --type=utility --utili...",
+      "severity": "HIGH",
+      "category": "SUSPICIOUS_PROCESS",
+      "technique": "T1036 \u2014 Masquerading",
+      "source": "process_monitor",
+      "pid": 783,
+      "path": null,
+      "extra": {},
+      "timestamp": "2026-05-30T20:27:40.959743",
+      "id": "e731bb79117a",
+      "score": 60,
+      "dismissed": false,
+      "category_label": "Suspicious Process",
+      "technique_url": "https://attack.mitre.org/techniques/T1036/"
+    },
+    {
+      "title": "Suspicious Process: /Applications/Spotify.app/Contents/Frameworks/Spotify Helper.app/Contents/MacOS/Spotify Helper (PID 789)",
+      "description": "Process '/Applications/Spotify.app/Contents/Frameworks/Spotify Helper.app/Contents/MacOS/Spotify Helper' (PID 789, user 'francescodichiara') flagged: Possible process name masquerade. Command: /Applications/Spotify.app/Contents/Frameworks/Spotify Helper.app/Contents/MacOS/Spotify Helper --type=utility --utili...",
+      "severity": "HIGH",
+      "category": "SUSPICIOUS_PROCESS",
+      "technique": "T1036 \u2014 Masquerading",
+      "source": "process_monitor",
+      "pid": 789,
+      "path": null,
+      "extra": {},
+      "timestamp": "2026-05-30T20:27:40.960026",
+      "id": "a50701e37fbe",
+      "score": 60,
+      "dismissed": false,
+      "category_label": "Suspicious Process",
+      "technique_url": "https://attack.mitre.org/techniques/T1036/"
+    },
+    {
+      "title": "Suspicious Process: /Applications/Spotify.app/Contents/Frameworks/Spotify Helper (Renderer).app/Contents/MacOS/Spotify Helper (Renderer) (PID 816)",
+      "description": "Process '/Applications/Spotify.app/Contents/Frameworks/Spotify Helper (Renderer).app/Contents/MacOS/Spotify Helper (Renderer)' (PID 816, user 'francescodichiara') flagged: Possible process name masquerade. Command: /Applications/Spotify.app/Contents/Frameworks/Spotify Helper (Renderer).app/Contents/MacOS/Spotify Helper (Renderer) ...",
+      "severity": "HIGH",
+      "category": "SUSPICIOUS_PROCESS",
+      "technique": "T1036 \u2014 Masquerading",
+      "source": "process_monitor",
+      "pid": 816,
+      "path": null,
+      "extra": {},
+      "timestamp": "2026-05-30T20:27:40.960819",
+      "id": "e275710d6a7a",
+      "score": 60,
+      "dismissed": false,
+      "category_label": "Suspicious Process",
+      "technique_url": "https://attack.mitre.org/techniques/T1036/"
+    },
+    {
+      "title": "Suspicious Process: /Applications/Spotify.app/Contents/Frameworks/Spotify Helper.app/Contents/MacOS/Spotify Helper (PID 850)",
+      "description": "Process '/Applications/Spotify.app/Contents/Frameworks/Spotify Helper.app/Contents/MacOS/Spotify Helper' (PID 850, user 'francescodichiara') flagged: Possible process name masquerade. Command: /Applications/Spotify.app/Contents/Frameworks/Spotify Helper.app/Contents/MacOS/Spotify Helper --type=utility --utili...",
+      "severity": "HIGH",
+      "category": "SUSPICIOUS_PROCESS",
+      "technique": "T1036 \u2014 Masquerading",
+      "source": "process_monitor",
+      "pid": 850,
+      "path": null,
+      "extra": {},
+      "timestamp": "2026-05-30T20:27:40.961861",
+      "id": "b5b3550a2d13",
+      "score": 60,
+      "dismissed": false,
+      "category_label": "Suspicious Process",
+      "technique_url": "https://attack.mitre.org/techniques/T1036/"
+    },
+    {
+      "title": "Suspicious Process: /System/Library/CoreServices/Keychain Circle Notification.app/Contents/MacOS/Keychain Circle Notification (PID 944)",
+      "description": "Process '/System/Library/CoreServices/Keychain Circle Notification.app/Contents/MacOS/Keychain Circle Notification' (PID 944, user 'francescodichiara') flagged: Possible process name masquerade. Command: /System/Library/CoreServices/Keychain Circle Notification.app/Contents/MacOS/Keychain Circle Notification",
+      "severity": "HIGH",
+      "category": "SUSPICIOUS_PROCESS",
+      "technique": "T1036 \u2014 Masquerading",
+      "source": "process_monitor",
+      "pid": 944,
+      "path": null,
+      "extra": {},
+      "timestamp": "2026-05-30T20:27:40.964197",
+      "id": "aa400287c7f1",
+      "score": 60,
+      "dismissed": false,
+      "category_label": "Suspicious Process",
+      "technique_url": "https://attack.mitre.org/techniques/T1036/"
+    },
+    {
+      "title": "Suspicious Process: /private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/MacOS/Electron (PID 1061)",
+      "description": "Process '/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/MacOS/Electron' (PID 1061, user 'francescodichiara') flagged: Possible process name masquerade. Command: /private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visu...",
+      "severity": "HIGH",
+      "category": "SUSPICIOUS_PROCESS",
+      "technique": "T1036 \u2014 Masquerading",
+      "source": "process_monitor",
+      "pid": 1061,
+      "path": null,
+      "extra": {},
+      "timestamp": "2026-05-30T20:27:40.966210",
+      "id": "ae22fa9059f4",
+      "score": 60,
+      "dismissed": false,
+      "category_label": "Suspicious Process",
+      "technique_url": "https://attack.mitre.org/techniques/T1036/"
+    },
+    {
+      "title": "Suspicious Process: /var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Electron Framework.framework/Helpers/chrome_crashpad_handler (PID 1070)",
+      "description": "Process '/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Electron Framework.framework/Helpers/chrome_crashpad_handler' (PID 1070, user 'francescodichiara') flagged: Possible process name masquerade. Command: /var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studi...",
+      "severity": "HIGH",
+      "category": "SUSPICIOUS_PROCESS",
+      "technique": "T1036 \u2014 Masquerading",
+      "source": "process_monitor",
+      "pid": 1070,
+      "path": null,
+      "extra": {},
+      "timestamp": "2026-05-30T20:27:40.966524",
+      "id": "47e42436805c",
+      "score": 60,
+      "dismissed": false,
+      "category_label": "Suspicious Process",
+      "technique_url": "https://attack.mitre.org/techniques/T1036/"
+    },
+    {
+      "title": "Suspicious Process: /private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper (GPU).app/Contents/MacOS/Code Helper (GPU) (PID 1071)",
+      "description": "Process '/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper (GPU).app/Contents/MacOS/Code Helper (GPU)' (PID 1071, user 'francescodichiara') flagged: Possible process name masquerade. Command: /private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visu...",
+      "severity": "HIGH",
+      "category": "SUSPICIOUS_PROCESS",
+      "technique": "T1036 \u2014 Masquerading",
+      "source": "process_monitor",
+      "pid": 1071,
+      "path": null,
+      "extra": {},
+      "timestamp": "2026-05-30T20:27:40.966688",
+      "id": "4a3c78738715",
+      "score": 60,
+      "dismissed": false,
+      "category_label": "Suspicious Process",
+      "technique_url": "https://attack.mitre.org/techniques/T1036/"
+    },
+    {
+      "title": "Suspicious Process: /private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper.app/Contents/MacOS/Code Helper (PID 1072)",
+      "description": "Process '/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper.app/Contents/MacOS/Code Helper' (PID 1072, user 'francescodichiara') flagged: Possible process name masquerade. Command: /private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visu...",
+      "severity": "HIGH",
+      "category": "SUSPICIOUS_PROCESS",
+      "technique": "T1036 \u2014 Masquerading",
+      "source": "process_monitor",
+      "pid": 1072,
+      "path": null,
+      "extra": {},
+      "timestamp": "2026-05-30T20:27:40.966884",
+      "id": "ae34f8470480",
+      "score": 60,
+      "dismissed": false,
+      "category_label": "Suspicious Process",
+      "technique_url": "https://attack.mitre.org/techniques/T1036/"
+    },
+    {
+      "title": "Suspicious Process: /private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper (Renderer).app/Contents/MacOS/Code Helper (Renderer) (PID 1082)",
+      "description": "Process '/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper (Renderer).app/Contents/MacOS/Code Helper (Renderer)' (PID 1082, user 'francescodichiara') flagged: Possible process name masquerade. Command: /private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visu...",
+      "severity": "HIGH",
+      "category": "SUSPICIOUS_PROCESS",
+      "technique": "T1036 \u2014 Masquerading",
+      "source": "process_monitor",
+      "pid": 1082,
+      "path": null,
+      "extra": {},
+      "timestamp": "2026-05-30T20:27:40.967208",
+      "id": "7105ebd2e6e5",
+      "score": 60,
+      "dismissed": false,
+      "category_label": "Suspicious Process",
+      "technique_url": "https://attack.mitre.org/techniques/T1036/"
+    },
+    {
+      "title": "Suspicious Process: /private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper.app/Contents/MacOS/Code Helper (PID 1095)",
+      "description": "Process '/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper.app/Contents/MacOS/Code Helper' (PID 1095, user 'francescodichiara') flagged: Possible process name masquerade. Command: /private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visu...",
+      "severity": "HIGH",
+      "category": "SUSPICIOUS_PROCESS",
+      "technique": "T1036 \u2014 Masquerading",
+      "source": "process_monitor",
+      "pid": 1095,
+      "path": null,
+      "extra": {},
+      "timestamp": "2026-05-30T20:27:40.967398",
+      "id": "fb695a088068",
+      "score": 60,
+      "dismissed": false,
+      "category_label": "Suspicious Process",
+      "technique_url": "https://attack.mitre.org/techniques/T1036/"
+    },
+    {
+      "title": "Suspicious Process: /private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper.app/Contents/MacOS/Code Helper (PID 1096)",
+      "description": "Process '/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper.app/Contents/MacOS/Code Helper' (PID 1096, user 'francescodichiara') flagged: Possible process name masquerade. Command: /private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visu...",
+      "severity": "HIGH",
+      "category": "SUSPICIOUS_PROCESS",
+      "technique": "T1036 \u2014 Masquerading",
+      "source": "process_monitor",
+      "pid": 1096,
+      "path": null,
+      "extra": {},
+      "timestamp": "2026-05-30T20:27:40.967588",
+      "id": "e1aac95a7cd9",
+      "score": 60,
+      "dismissed": false,
+      "category_label": "Suspicious Process",
+      "technique_url": "https://attack.mitre.org/techniques/T1036/"
+    },
+    {
+      "title": "Suspicious Process: /private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin) (PID 1097)",
+      "description": "Process '/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin)' (PID 1097, user 'francescodichiara') flagged: Possible process name masquerade. Command: /private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visu...",
+      "severity": "HIGH",
+      "category": "SUSPICIOUS_PROCESS",
+      "technique": "T1036 \u2014 Masquerading",
+      "source": "process_monitor",
+      "pid": 1097,
+      "path": null,
+      "extra": {},
+      "timestamp": "2026-05-30T20:27:40.967796",
+      "id": "c722007b88e7",
+      "score": 60,
+      "dismissed": false,
+      "category_label": "Suspicious Process",
+      "technique_url": "https://attack.mitre.org/techniques/T1036/"
+    },
+    {
+      "title": "Suspicious Process: /private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin) (PID 1140)",
+      "description": "Process '/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin)' (PID 1140, user 'francescodichiara') flagged: Possible process name masquerade. Command: /private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visu...",
+      "severity": "HIGH",
+      "category": "SUSPICIOUS_PROCESS",
+      "technique": "T1036 \u2014 Masquerading",
+      "source": "process_monitor",
+      "pid": 1140,
+      "path": null,
+      "extra": {},
+      "timestamp": "2026-05-30T20:27:40.967944",
+      "id": "084c87847edc",
+      "score": 60,
+      "dismissed": false,
+      "category_label": "Suspicious Process",
+      "technique_url": "https://attack.mitre.org/techniques/T1036/"
+    },
+    {
+      "title": "Suspicious Process: /private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper.app/Contents/MacOS/Code Helper (PID 1142)",
+      "description": "Process '/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper.app/Contents/MacOS/Code Helper' (PID 1142, user 'francescodichiara') flagged: Possible process name masquerade. Command: /private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visu...",
+      "severity": "HIGH",
+      "category": "SUSPICIOUS_PROCESS",
+      "technique": "T1036 \u2014 Masquerading",
+      "source": "process_monitor",
+      "pid": 1142,
+      "path": null,
+      "extra": {},
+      "timestamp": "2026-05-30T20:27:40.968134",
+      "id": "bea1fe372eed",
+      "score": 60,
+      "dismissed": false,
+      "category_label": "Suspicious Process",
+      "technique_url": "https://attack.mitre.org/techniques/T1036/"
+    },
+    {
+      "title": "Suspicious Process: /private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin) (PID 1153)",
+      "description": "Process '/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin)' (PID 1153, user 'francescodichiara') flagged: Possible process name masquerade. Command: /private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visu...",
+      "severity": "HIGH",
+      "category": "SUSPICIOUS_PROCESS",
+      "technique": "T1036 \u2014 Masquerading",
+      "source": "process_monitor",
+      "pid": 1153,
+      "path": null,
+      "extra": {},
+      "timestamp": "2026-05-30T20:27:40.968257",
+      "id": "f9d11b9ef766",
+      "score": 60,
+      "dismissed": false,
+      "category_label": "Suspicious Process",
+      "technique_url": "https://attack.mitre.org/techniques/T1036/"
+    },
+    {
+      "title": "Suspicious Process: /private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin) (PID 1203)",
+      "description": "Process '/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin)' (PID 1203, user 'francescodichiara') flagged: Possible process name masquerade. Command: /private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visu...",
+      "severity": "HIGH",
+      "category": "SUSPICIOUS_PROCESS",
+      "technique": "T1036 \u2014 Masquerading",
+      "source": "process_monitor",
+      "pid": 1203,
+      "path": null,
+      "extra": {},
+      "timestamp": "2026-05-30T20:27:40.968386",
+      "id": "1bdbee296bd7",
+      "score": 60,
+      "dismissed": false,
+      "category_label": "Suspicious Process",
+      "technique_url": "https://attack.mitre.org/techniques/T1036/"
+    },
+    {
+      "title": "Suspicious Process: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome (PID 1432)",
+      "description": "Process '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' (PID 1432, user 'francescodichiara') flagged: Possible process name masquerade. Command: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      "severity": "HIGH",
+      "category": "SUSPICIOUS_PROCESS",
+      "technique": "T1036 \u2014 Masquerading",
+      "source": "process_monitor",
+      "pid": 1432,
+      "path": null,
+      "extra": {},
+      "timestamp": "2026-05-30T20:27:40.968502",
+      "id": "e463888396ba",
+      "score": 60,
+      "dismissed": false,
+      "category_label": "Suspicious Process",
+      "technique_url": "https://attack.mitre.org/techniques/T1036/"
+    },
+    {
+      "title": "Suspicious Process: /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers/chrome_crashpad_handler (PID 1436)",
+      "description": "Process '/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers/chrome_crashpad_handler' (PID 1436, user 'francescodichiara') flagged: Possible process name masquerade. Command: /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers...",
+      "severity": "HIGH",
+      "category": "SUSPICIOUS_PROCESS",
+      "technique": "T1036 \u2014 Masquerading",
+      "source": "process_monitor",
+      "pid": 1436,
+      "path": null,
+      "extra": {},
+      "timestamp": "2026-05-30T20:27:40.968589",
+      "id": "3d58a7acb743",
+      "score": 60,
+      "dismissed": false,
+      "category_label": "Suspicious Process",
+      "technique_url": "https://attack.mitre.org/techniques/T1036/"
+    },
+    {
+      "title": "Suspicious Process: /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper (PID 1440)",
+      "description": "Process '/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper' (PID 1440, user 'francescodichiara') flagged: Possible process name masquerade. Command: /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers...",
+      "severity": "HIGH",
+      "category": "SUSPICIOUS_PROCESS",
+      "technique": "T1036 \u2014 Masquerading",
+      "source": "process_monitor",
+      "pid": 1440,
+      "path": null,
+      "extra": {},
+      "timestamp": "2026-05-30T20:27:40.968714",
+      "id": "ba063e7146f9",
+      "score": 60,
+      "dismissed": false,
+      "category_label": "Suspicious Process",
+      "technique_url": "https://attack.mitre.org/techniques/T1036/"
+    },
+    {
+      "title": "Suspicious Process: /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper (PID 1441)",
+      "description": "Process '/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper' (PID 1441, user 'francescodichiara') flagged: Possible process name masquerade. Command: /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers...",
+      "severity": "HIGH",
+      "category": "SUSPICIOUS_PROCESS",
+      "technique": "T1036 \u2014 Masquerading",
+      "source": "process_monitor",
+      "pid": 1441,
+      "path": null,
+      "extra": {},
+      "timestamp": "2026-05-30T20:27:40.968834",
+      "id": "3c8d31bd08c1",
+      "score": 60,
+      "dismissed": false,
+      "category_label": "Suspicious Process",
+      "technique_url": "https://attack.mitre.org/techniques/T1036/"
+    },
+    {
+      "title": "Suspicious Process: /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper (PID 1442)",
+      "description": "Process '/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper' (PID 1442, user 'francescodichiara') flagged: Possible process name masquerade. Command: /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers...",
+      "severity": "HIGH",
+      "category": "SUSPICIOUS_PROCESS",
+      "technique": "T1036 \u2014 Masquerading",
+      "source": "process_monitor",
+      "pid": 1442,
+      "path": null,
+      "extra": {},
+      "timestamp": "2026-05-30T20:27:40.968952",
+      "id": "12e6a96a778c",
+      "score": 60,
+      "dismissed": false,
+      "category_label": "Suspicious Process",
+      "technique_url": "https://attack.mitre.org/techniques/T1036/"
+    },
+    {
+      "title": "Suspicious Process: /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer) (PID 1454)",
+      "description": "Process '/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)' (PID 1454, user 'francescodichiara') flagged: Possible process name masquerade. Command: /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers...",
+      "severity": "HIGH",
+      "category": "SUSPICIOUS_PROCESS",
+      "technique": "T1036 \u2014 Masquerading",
+      "source": "process_monitor",
+      "pid": 1454,
+      "path": null,
+      "extra": {},
+      "timestamp": "2026-05-30T20:27:40.969113",
+      "id": "c3f1530cdae5",
+      "score": 60,
+      "dismissed": false,
+      "category_label": "Suspicious Process",
+      "technique_url": "https://attack.mitre.org/techniques/T1036/"
+    },
+    {
+      "title": "Suspicious Process: /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer) (PID 1460)",
+      "description": "Process '/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)' (PID 1460, user 'francescodichiara') flagged: Possible process name masquerade. Command: /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers...",
+      "severity": "HIGH",
+      "category": "SUSPICIOUS_PROCESS",
+      "technique": "T1036 \u2014 Masquerading",
+      "source": "process_monitor",
+      "pid": 1460,
+      "path": null,
+      "extra": {},
+      "timestamp": "2026-05-30T20:27:40.969380",
+      "id": "2bde57acc707",
+      "score": 60,
+      "dismissed": false,
+      "category_label": "Suspicious Process",
+      "technique_url": "https://attack.mitre.org/techniques/T1036/"
+    },
+    {
+      "title": "Suspicious Process: /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper (PID 1462)",
+      "description": "Process '/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper' (PID 1462, user 'francescodichiara') flagged: Possible process name masquerade. Command: /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers...",
+      "severity": "HIGH",
+      "category": "SUSPICIOUS_PROCESS",
+      "technique": "T1036 \u2014 Masquerading",
+      "source": "process_monitor",
+      "pid": 1462,
+      "path": null,
+      "extra": {},
+      "timestamp": "2026-05-30T20:27:40.969530",
+      "id": "c6791daa41ff",
+      "score": 60,
+      "dismissed": false,
+      "category_label": "Suspicious Process",
+      "technique_url": "https://attack.mitre.org/techniques/T1036/"
+    },
+    {
+      "title": "Suspicious Process: /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper (PID 1463)",
+      "description": "Process '/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper' (PID 1463, user 'francescodichiara') flagged: Possible process name masquerade. Command: /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers...",
+      "severity": "HIGH",
+      "category": "SUSPICIOUS_PROCESS",
+      "technique": "T1036 \u2014 Masquerading",
+      "source": "process_monitor",
+      "pid": 1463,
+      "path": null,
+      "extra": {},
+      "timestamp": "2026-05-30T20:27:40.969649",
+      "id": "e35a55fb2a26",
+      "score": 60,
+      "dismissed": false,
+      "category_label": "Suspicious Process",
+      "technique_url": "https://attack.mitre.org/techniques/T1036/"
+    },
+    {
+      "title": "Suspicious Process: /var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/25E0FAA3-5191-453D-B6B1-B8C79645CADD/d/UTM.app/Contents/XPCServices/QEMUHelper.xpc/Contents/MacOS/QEMULauncher.app/Contents/MacOS/QEMULauncher (PID 1911)",
+      "description": "Process '/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/25E0FAA3-5191-453D-B6B1-B8C79645CADD/d/UTM.app/Contents/XPCServices/QEMUHelper.xpc/Contents/MacOS/QEMULauncher.app/Contents/MacOS/QEMULauncher' (PID 1911, user 'francescodichiara') flagged: High memory usage: 2379 MB. Command: /var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/25E0FAA3-5191-453D-B6B1-B8C79645CADD/d/UTM.app/Cont...",
+      "severity": "HIGH",
+      "category": "SUSPICIOUS_PROCESS",
+      "technique": "T1059 \u2014 Command and Scripting Interpreter",
+      "source": "process_monitor",
+      "pid": 1911,
+      "path": null,
+      "extra": {},
+      "timestamp": "2026-05-30T20:27:40.970622",
+      "id": "e0058d0ee898",
+      "score": 60,
+      "dismissed": false,
+      "category_label": "Suspicious Process",
+      "technique_url": "https://attack.mitre.org/techniques/T1059/"
+    },
+    {
+      "title": "Unexpected SUID Binary: write",
+      "description": "Binary '/usr/bin/write' has SGID bit set and is not in the known-good whitelist. Could be used for privilege escalation.",
+      "severity": "HIGH",
+      "category": "PRIVILEGE_ESCALATION",
+      "technique": "T1548.001 \u2014 Abuse Elevation Control Mechanism: Setuid/Setgid",
+      "source": "file_integrity",
+      "pid": null,
+      "path": "/usr/bin/write",
+      "extra": {},
+      "timestamp": "2026-05-30T20:27:41.315517",
+      "id": "d51bb76501da",
+      "score": 60,
+      "dismissed": false,
+      "category_label": "Privilege Escalation",
+      "technique_url": "https://attack.mitre.org/techniques/T1548/001/"
+    },
+    {
+      "title": "Unexpected SUID Binary: top",
+      "description": "Binary '/usr/bin/top' has SUID bit set and is not in the known-good whitelist. Could be used for privilege escalation.",
+      "severity": "HIGH",
+      "category": "PRIVILEGE_ESCALATION",
+      "technique": "T1548.001 \u2014 Abuse Elevation Control Mechanism: Setuid/Setgid",
+      "source": "file_integrity",
+      "pid": null,
+      "path": "/usr/bin/top",
+      "extra": {},
+      "timestamp": "2026-05-30T20:27:41.315539",
+      "id": "30abe389a3f0",
+      "score": 60,
+      "dismissed": false,
+      "category_label": "Privilege Escalation",
+      "technique_url": "https://attack.mitre.org/techniques/T1548/001/"
+    },
+    {
+      "title": "Unexpected SUID Binary: atq",
+      "description": "Binary '/usr/bin/atq' has SUID bit set and is not in the known-good whitelist. Could be used for privilege escalation.",
+      "severity": "HIGH",
+      "category": "PRIVILEGE_ESCALATION",
+      "technique": "T1548.001 \u2014 Abuse Elevation Control Mechanism: Setuid/Setgid",
+      "source": "file_integrity",
+      "pid": null,
+      "path": "/usr/bin/atq",
+      "extra": {},
+      "timestamp": "2026-05-30T20:27:41.315546",
+      "id": "ee2320c13036",
+      "score": 60,
+      "dismissed": false,
+      "category_label": "Privilege Escalation",
+      "technique_url": "https://attack.mitre.org/techniques/T1548/001/"
+    },
+    {
+      "title": "Unexpected SUID Binary: crontab",
+      "description": "Binary '/usr/bin/crontab' has SUID bit set and is not in the known-good whitelist. Could be used for privilege escalation.",
+      "severity": "HIGH",
+      "category": "PRIVILEGE_ESCALATION",
+      "technique": "T1548.001 \u2014 Abuse Elevation Control Mechanism: Setuid/Setgid",
+      "source": "file_integrity",
+      "pid": null,
+      "path": "/usr/bin/crontab",
+      "extra": {},
+      "timestamp": "2026-05-30T20:27:41.315550",
+      "id": "93eae52397b6",
+      "score": 60,
+      "dismissed": false,
+      "category_label": "Privilege Escalation",
+      "technique_url": "https://attack.mitre.org/techniques/T1548/001/"
+    },
+    {
+      "title": "Unexpected SUID Binary: atrm",
+      "description": "Binary '/usr/bin/atrm' has SUID bit set and is not in the known-good whitelist. Could be used for privilege escalation.",
+      "severity": "HIGH",
+      "category": "PRIVILEGE_ESCALATION",
+      "technique": "T1548.001 \u2014 Abuse Elevation Control Mechanism: Setuid/Setgid",
+      "source": "file_integrity",
+      "pid": null,
+      "path": "/usr/bin/atrm",
+      "extra": {},
+      "timestamp": "2026-05-30T20:27:41.315555",
+      "id": "38a049b203c9",
+      "score": 60,
+      "dismissed": false,
+      "category_label": "Privilege Escalation",
+      "technique_url": "https://attack.mitre.org/techniques/T1548/001/"
+    },
+    {
+      "title": "Unexpected SUID Binary: batch",
+      "description": "Binary '/usr/bin/batch' has SUID bit set and is not in the known-good whitelist. Could be used for privilege escalation.",
+      "severity": "HIGH",
+      "category": "PRIVILEGE_ESCALATION",
+      "technique": "T1548.001 \u2014 Abuse Elevation Control Mechanism: Setuid/Setgid",
+      "source": "file_integrity",
+      "pid": null,
+      "path": "/usr/bin/batch",
+      "extra": {},
+      "timestamp": "2026-05-30T20:27:41.315559",
+      "id": "93cec55eb874",
+      "score": 60,
+      "dismissed": false,
+      "category_label": "Privilege Escalation",
+      "technique_url": "https://attack.mitre.org/techniques/T1548/001/"
+    },
+    {
+      "title": "Unexpected SUID Binary: at",
+      "description": "Binary '/usr/bin/at' has SUID bit set and is not in the known-good whitelist. Could be used for privilege escalation.",
+      "severity": "HIGH",
+      "category": "PRIVILEGE_ESCALATION",
+      "technique": "T1548.001 \u2014 Abuse Elevation Control Mechanism: Setuid/Setgid",
+      "source": "file_integrity",
+      "pid": null,
+      "path": "/usr/bin/at",
+      "extra": {},
+      "timestamp": "2026-05-30T20:27:41.315563",
+      "id": "955a09f94579",
+      "score": 60,
+      "dismissed": false,
+      "category_label": "Privilege Escalation",
+      "technique_url": "https://attack.mitre.org/techniques/T1548/001/"
+    },
+    {
+      "title": "Unexpected SUID Binary: quota",
+      "description": "Binary '/usr/bin/quota' has SUID bit set and is not in the known-good whitelist. Could be used for privilege escalation.",
+      "severity": "HIGH",
+      "category": "PRIVILEGE_ESCALATION",
+      "technique": "T1548.001 \u2014 Abuse Elevation Control Mechanism: Setuid/Setgid",
+      "source": "file_integrity",
+      "pid": null,
+      "path": "/usr/bin/quota",
+      "extra": {},
+      "timestamp": "2026-05-30T20:27:41.315566",
+      "id": "88886e20b013",
+      "score": 60,
+      "dismissed": false,
+      "category_label": "Privilege Escalation",
+      "technique_url": "https://attack.mitre.org/techniques/T1548/001/"
+    },
+    {
+      "title": "Unexpected SUID Binary: login",
+      "description": "Binary '/usr/bin/login' has SUID bit set and is not in the known-good whitelist. Could be used for privilege escalation.",
+      "severity": "HIGH",
+      "category": "PRIVILEGE_ESCALATION",
+      "technique": "T1548.001 \u2014 Abuse Elevation Control Mechanism: Setuid/Setgid",
+      "source": "file_integrity",
+      "pid": null,
+      "path": "/usr/bin/login",
+      "extra": {},
+      "timestamp": "2026-05-30T20:27:41.315570",
+      "id": "9240bacb65e7",
+      "score": 60,
+      "dismissed": false,
+      "category_label": "Privilege Escalation",
+      "technique_url": "https://attack.mitre.org/techniques/T1548/001/"
+    },
+    {
+      "title": "Unexpected SUID Binary: security_authtrampoline",
+      "description": "Binary '/usr/libexec/security_authtrampoline' has SUID bit set and is not in the known-good whitelist. Could be used for privilege escalation.",
+      "severity": "HIGH",
+      "category": "PRIVILEGE_ESCALATION",
+      "technique": "T1548.001 \u2014 Abuse Elevation Control Mechanism: Setuid/Setgid",
+      "source": "file_integrity",
+      "pid": null,
+      "path": "/usr/libexec/security_authtrampoline",
+      "extra": {},
+      "timestamp": "2026-05-30T20:27:41.315573",
+      "id": "9bfbd5781510",
+      "score": 60,
+      "dismissed": false,
+      "category_label": "Privilege Escalation",
+      "technique_url": "https://attack.mitre.org/techniques/T1548/001/"
+    }
+  ],
+  "ssh_sockets": [
+    {
+      "path": "/var/run/mDNSResponder",
+      "owner": "root",
+      "permissions": "0o666",
+      "risk": "HIGH",
+      "accessing_pids": ""
+    },
+    {
+      "path": "/var/run/syslog",
+      "owner": "root",
+      "permissions": "0o666",
+      "risk": "HIGH",
+      "accessing_pids": ""
+    },
+    {
+      "path": "/var/run/vpncontrol.sock",
+      "owner": "root",
+      "permissions": "0o600",
+      "risk": "HIGH",
+      "accessing_pids": ""
+    },
+    {
+      "path": "/var/run/cupsd",
+      "owner": "root",
+      "permissions": "0o777",
+      "risk": "HIGH",
+      "accessing_pids": ""
+    },
+    {
+      "path": "/var/run/pppconfd",
+      "owner": "root",
+      "permissions": "0o777",
+      "risk": "HIGH",
+      "accessing_pids": ""
+    },
+    {
+      "path": "/var/run/portmap.socket",
+      "owner": "root",
+      "permissions": "0o777",
+      "risk": "HIGH",
+      "accessing_pids": ""
+    },
+    {
+      "path": "/var/run/systemkeychaincheck.socket",
+      "owner": "root",
+      "permissions": "0o666",
+      "risk": "HIGH",
+      "accessing_pids": ""
+    },
+    {
+      "path": "/var/run/usbmuxd",
+      "owner": "root",
+      "permissions": "0o777",
+      "risk": "HIGH",
+      "accessing_pids": ""
+    },
+    {
+      "path": "/var/run/.sim_diagnosticd_socket",
+      "owner": "root",
+      "permissions": "0o777",
+      "risk": "HIGH",
+      "accessing_pids": ""
+    },
+    {
+      "path": "/var/run/filesystemui.socket",
+      "owner": "francescodichiara",
+      "permissions": "0o644",
+      "risk": "LOW",
+      "accessing_pids": ""
+    },
+    {
+      "path": "/var/run/com.apple.launchd.XP62C2YaN9/Listeners",
+      "owner": "francescodichiara",
+      "permissions": "0o666",
+      "risk": "CRITICAL",
+      "accessing_pids": "400,581,589,608,612,615,618,619,623,624,628,635,641,650,651,653,664,673,685,690,691,730,746,769,783,803,828,832,837,885,886,899,913,917,929,938,1061,1097,1111,1140,1153,1203,1432,1473,1818,1904,1911"
+    },
+    {
+      "path": "/Users/francescodichiara/.ssh/agent/s.coeWVMlEmb.agent.XQ7bnJPmyx",
+      "owner": "francescodichiara",
+      "permissions": "0o600",
+      "risk": "CRITICAL",
+      "accessing_pids": "400,581,589,608,612,615,618,619,623,624,628,635,641,650,651,653,664,673,685,690,691,730,746,769,783,803,828,832,837,885,886,899,913,917,929,938,1061,1097,1111,1140,1153,1203,1432,1473,1818,1904,1911"
+    }
+  ],
+  "processes": [
+    {
+      "pid": "479",
+      "name": "Core Audio Driver (ParrotAudioPlugin.driver)",
+      "user": "_coreaudiod",
+      "severity": "HIGH",
+      "reasons": "Possible process name masquerade",
+      "command": "Core Audio Driver (ParrotAudioPlugin.driver)"
+    },
+    {
+      "pid": "552",
+      "name": "/System/Library/CoreServices/Software Update.app/Contents/Resources/suhelperd",
+      "user": "root",
+      "severity": "HIGH",
+      "reasons": "Possible process name masquerade",
+      "command": "/System/Library/CoreServices/Software Update.app/Contents/Resources/suhelperd"
+    },
+    {
+      "pid": "556",
+      "name": "/System/Library/CoreServices/Software Update.app/Contents/Resources/softwareupdated",
+      "user": "_softwareupdate",
+      "severity": "HIGH",
+      "reasons": "Possible process name masquerade",
+      "command": "/System/Library/CoreServices/Software Update.app/Contents/Resources/softwareupdated"
+    },
+    {
+      "pid": "732",
+      "name": "/System/Library/Input Methods/PressAndHold.app/Contents/PlugIns/PAH_Extension.appex/Contents/MacOS/PAH_Extension",
+      "user": "francescodichiara",
+      "severity": "HIGH",
+      "reasons": "Possible process name masquerade",
+      "command": "/System/Library/Input Methods/PressAndHold.app/Contents/PlugIns/PAH_Extension.appex/Contents/MacOS/P"
+    },
+    {
+      "pid": "746",
+      "name": "/System/Library/Image Capture/Support/icdd",
+      "user": "francescodichiara",
+      "severity": "HIGH",
+      "reasons": "Possible process name masquerade",
+      "command": "/System/Library/Image Capture/Support/icdd"
+    },
+    {
+      "pid": "778",
+      "name": "/Applications/Spotify.app/Contents/Frameworks/Spotify Helper.app/Contents/MacOS/Spotify Helper",
+      "user": "francescodichiara",
+      "severity": "HIGH",
+      "reasons": "Possible process name masquerade",
+      "command": "/Applications/Spotify.app/Contents/Frameworks/Spotify Helper.app/Contents/MacOS/Spotify Helper --mon"
+    },
+    {
+      "pid": "782",
+      "name": "/Applications/Spotify.app/Contents/Frameworks/Spotify Helper.app/Contents/MacOS/Spotify Helper",
+      "user": "francescodichiara",
+      "severity": "HIGH",
+      "reasons": "Possible process name masquerade",
+      "command": "/Applications/Spotify.app/Contents/Frameworks/Spotify Helper.app/Contents/MacOS/Spotify Helper --typ"
+    },
+    {
+      "pid": "783",
+      "name": "/Applications/Spotify.app/Contents/Frameworks/Spotify Helper.app/Contents/MacOS/Spotify Helper",
+      "user": "francescodichiara",
+      "severity": "HIGH",
+      "reasons": "Possible process name masquerade",
+      "command": "/Applications/Spotify.app/Contents/Frameworks/Spotify Helper.app/Contents/MacOS/Spotify Helper --typ"
+    },
+    {
+      "pid": "789",
+      "name": "/Applications/Spotify.app/Contents/Frameworks/Spotify Helper.app/Contents/MacOS/Spotify Helper",
+      "user": "francescodichiara",
+      "severity": "HIGH",
+      "reasons": "Possible process name masquerade",
+      "command": "/Applications/Spotify.app/Contents/Frameworks/Spotify Helper.app/Contents/MacOS/Spotify Helper --typ"
+    },
+    {
+      "pid": "816",
+      "name": "/Applications/Spotify.app/Contents/Frameworks/Spotify Helper (Renderer).app/Contents/MacOS/Spotify Helper (Renderer)",
+      "user": "francescodichiara",
+      "severity": "HIGH",
+      "reasons": "Possible process name masquerade",
+      "command": "/Applications/Spotify.app/Contents/Frameworks/Spotify Helper (Renderer).app/Contents/MacOS/Spotify H"
+    },
+    {
+      "pid": "850",
+      "name": "/Applications/Spotify.app/Contents/Frameworks/Spotify Helper.app/Contents/MacOS/Spotify Helper",
+      "user": "francescodichiara",
+      "severity": "HIGH",
+      "reasons": "Possible process name masquerade",
+      "command": "/Applications/Spotify.app/Contents/Frameworks/Spotify Helper.app/Contents/MacOS/Spotify Helper --typ"
+    },
+    {
+      "pid": "944",
+      "name": "/System/Library/CoreServices/Keychain Circle Notification.app/Contents/MacOS/Keychain Circle Notification",
+      "user": "francescodichiara",
+      "severity": "HIGH",
+      "reasons": "Possible process name masquerade",
+      "command": "/System/Library/CoreServices/Keychain Circle Notification.app/Contents/MacOS/Keychain Circle Notific"
+    },
+    {
+      "pid": "1061",
+      "name": "/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/MacOS/Electron",
+      "user": "francescodichiara",
+      "severity": "HIGH",
+      "reasons": "Possible process name masquerade",
+      "command": "/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F4"
+    },
+    {
+      "pid": "1070",
+      "name": "/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Electron Framework.framework/Helpers/chrome_crashpad_handler",
+      "user": "francescodichiara",
+      "severity": "HIGH",
+      "reasons": "Possible process name masquerade",
+      "command": "/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC51"
+    },
+    {
+      "pid": "1071",
+      "name": "/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper (GPU).app/Contents/MacOS/Code Helper (GPU)",
+      "user": "francescodichiara",
+      "severity": "HIGH",
+      "reasons": "Possible process name masquerade",
+      "command": "/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F4"
+    },
+    {
+      "pid": "1072",
+      "name": "/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper.app/Contents/MacOS/Code Helper",
+      "user": "francescodichiara",
+      "severity": "HIGH",
+      "reasons": "Possible process name masquerade",
+      "command": "/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F4"
+    },
+    {
+      "pid": "1082",
+      "name": "/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper (Renderer).app/Contents/MacOS/Code Helper (Renderer)",
+      "user": "francescodichiara",
+      "severity": "HIGH",
+      "reasons": "Possible process name masquerade",
+      "command": "/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F4"
+    },
+    {
+      "pid": "1095",
+      "name": "/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper.app/Contents/MacOS/Code Helper",
+      "user": "francescodichiara",
+      "severity": "HIGH",
+      "reasons": "Possible process name masquerade",
+      "command": "/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F4"
+    },
+    {
+      "pid": "1096",
+      "name": "/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper.app/Contents/MacOS/Code Helper",
+      "user": "francescodichiara",
+      "severity": "HIGH",
+      "reasons": "Possible process name masquerade",
+      "command": "/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F4"
+    },
+    {
+      "pid": "1097",
+      "name": "/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin)",
+      "user": "francescodichiara",
+      "severity": "HIGH",
+      "reasons": "Possible process name masquerade",
+      "command": "/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F4"
+    },
+    {
+      "pid": "1140",
+      "name": "/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin)",
+      "user": "francescodichiara",
+      "severity": "HIGH",
+      "reasons": "Possible process name masquerade",
+      "command": "/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F4"
+    },
+    {
+      "pid": "1142",
+      "name": "/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper.app/Contents/MacOS/Code Helper",
+      "user": "francescodichiara",
+      "severity": "HIGH",
+      "reasons": "Possible process name masquerade",
+      "command": "/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F4"
+    },
+    {
+      "pid": "1153",
+      "name": "/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin)",
+      "user": "francescodichiara",
+      "severity": "HIGH",
+      "reasons": "Possible process name masquerade",
+      "command": "/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F4"
+    },
+    {
+      "pid": "1203",
+      "name": "/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin)",
+      "user": "francescodichiara",
+      "severity": "HIGH",
+      "reasons": "Possible process name masquerade",
+      "command": "/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F4"
+    },
+    {
+      "pid": "1432",
+      "name": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      "user": "francescodichiara",
+      "severity": "HIGH",
+      "reasons": "Possible process name masquerade",
+      "command": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+    },
+    {
+      "pid": "1436",
+      "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers/chrome_crashpad_handler",
+      "user": "francescodichiara",
+      "severity": "HIGH",
+      "reasons": "Possible process name masquerade",
+      "command": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0"
+    },
+    {
+      "pid": "1440",
+      "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper",
+      "user": "francescodichiara",
+      "severity": "HIGH",
+      "reasons": "Possible process name masquerade",
+      "command": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0"
+    },
+    {
+      "pid": "1441",
+      "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper",
+      "user": "francescodichiara",
+      "severity": "HIGH",
+      "reasons": "Possible process name masquerade",
+      "command": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0"
+    },
+    {
+      "pid": "1442",
+      "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper",
+      "user": "francescodichiara",
+      "severity": "HIGH",
+      "reasons": "Possible process name masquerade",
+      "command": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0"
+    },
+    {
+      "pid": "1454",
+      "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)",
+      "user": "francescodichiara",
+      "severity": "HIGH",
+      "reasons": "Possible process name masquerade",
+      "command": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0"
+    },
+    {
+      "pid": "1460",
+      "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)",
+      "user": "francescodichiara",
+      "severity": "HIGH",
+      "reasons": "Possible process name masquerade",
+      "command": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0"
+    },
+    {
+      "pid": "1462",
+      "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper",
+      "user": "francescodichiara",
+      "severity": "HIGH",
+      "reasons": "Possible process name masquerade",
+      "command": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0"
+    },
+    {
+      "pid": "1463",
+      "name": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper",
+      "user": "francescodichiara",
+      "severity": "HIGH",
+      "reasons": "Possible process name masquerade",
+      "command": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0"
+    },
+    {
+      "pid": "1911",
+      "name": "/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/25E0FAA3-5191-453D-B6B1-B8C79645CADD/d/UTM.app/Contents/XPCServices/QEMUHelper.xpc/Contents/MacOS/QEMULauncher.app/Contents/MacOS/QEMULauncher",
+      "user": "francescodichiara",
+      "severity": "HIGH",
+      "reasons": "High memory usage: 2379 MB",
+      "command": "/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/25E0FAA3-5191-453D-B6B1-B8C79645CA"
+    }
+  ],
+  "connections": [
+    {
+      "proto": "4d9e11c7ffb3816",
+      "state": "76bf7081f1494300",
+      "local": "0",
+      "remote": "0",
+      "process": "var/run/mDNSResponder/",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "76bf7081f1494300",
+      "state": "4d9e11c7ffb3816",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "b593c94671879765",
+      "state": "d0ac204778e699be",
+      "local": "0",
+      "remote": "0",
+      "process": "var/run/mDNSResponder/",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "d0ac204778e699be",
+      "state": "b593c94671879765",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "9fff44d64db88898",
+      "state": "83e3424e2626f5e4",
+      "local": "0",
+      "remote": "0",
+      "process": "var/run/mDNSResponder/",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "83e3424e2626f5e4",
+      "state": "9fff44d64db88898",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "fa2b967caa52bad7",
+      "state": "3a9a38475625934c",
+      "local": "0",
+      "remote": "0",
+      "process": "var/run/mDNSResponder/",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "3a9a38475625934c",
+      "state": "fa2b967caa52bad7",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "ff671b4bc55cdf82",
+      "state": "1fdda921d40c2e56",
+      "local": "0",
+      "remote": "0",
+      "process": "var/run/mDNSResponder/",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "1fdda921d40c2e56",
+      "state": "ff671b4bc55cdf82",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "7bf19dd1baca03b9",
+      "state": "7468505579048a7c",
+      "local": "0",
+      "remote": "0",
+      "process": "var/run/mDNSResponder/",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "7468505579048a7c",
+      "state": "7bf19dd1baca03b9",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "6a47fd802025ddd2",
+      "state": "0",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "8ba330b1658aebd8",
+      "state": "cdc068cb013e266b",
+      "local": "0",
+      "remote": "0",
+      "process": "var/run/mDNSResponder/",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "cdc068cb013e266b",
+      "state": "8ba330b1658aebd8",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "c320637f17c415e1",
+      "state": "a17fb913493c1c",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "a17fb913493c1c",
+      "state": "c320637f17c415e1",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "9b35b40ddfefd345",
+      "state": "2129d18386a1df89",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "2129d18386a1df89",
+      "state": "9b35b40ddfefd345",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "c4e64c83777ff5a5",
+      "state": "605b1e87ce2664c9",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "605b1e87ce2664c9",
+      "state": "c4e64c83777ff5a5",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "5855ebf495fc59a4",
+      "state": "1c6ca4c0b250f231",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "1c6ca4c0b250f231",
+      "state": "5855ebf495fc59a4",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "838285b35d3cea3c",
+      "state": "b124b0cbb8d28663",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "b124b0cbb8d28663",
+      "state": "838285b35d3cea3c",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "6c8425d37c7feb94",
+      "state": "627c1998c96e6c8c",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "627c1998c96e6c8c",
+      "state": "6c8425d37c7feb94",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "2a6cd4020703a9fe",
+      "state": "246e934924a6485e",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "246e934924a6485e",
+      "state": "2a6cd4020703a9fe",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "33508c8b867222e6",
+      "state": "3453a778fa6184a3",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "3453a778fa6184a3",
+      "state": "33508c8b867222e6",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "d9cadaf7cda5cb03",
+      "state": "44ec04c0306a0634",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "44ec04c0306a0634",
+      "state": "d9cadaf7cda5cb03",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "aaecb603bf427c19",
+      "state": "fb81508e4e330ae7",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "fb81508e4e330ae7",
+      "state": "aaecb603bf427c19",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "bc077343b2b53337",
+      "state": "1da984eb8d212fc1",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "1da984eb8d212fc1",
+      "state": "bc077343b2b53337",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "41fdf52d7294289f",
+      "state": "d7b02c394867d84",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "d7b02c394867d84",
+      "state": "41fdf52d7294289f",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "32184e3c12425a1f",
+      "state": "51a238ace72f2253",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "51a238ace72f2253",
+      "state": "32184e3c12425a1f",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "e4e0959444aaae50",
+      "state": "0",
+      "local": "0",
+      "remote": "780dea217477917d",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "5341611c7270a71a",
+      "state": "53e4ba9f0026b898",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "53e4ba9f0026b898",
+      "state": "5341611c7270a71a",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "a9b399f04c81751",
+      "state": "0",
+      "local": "0",
+      "remote": "1960ac5f13d253d9",
+      "process": "Users/francescodichiara/.ssh/agent/s.coeWVMlEmb.agent.XQ7bnJPmyx/",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "c843201f3cd392aa",
+      "state": "38cf919d9a8e73f9",
+      "local": "0",
+      "remote": "0",
+      "process": "var/run/mDNSResponder/",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "38cf919d9a8e73f9",
+      "state": "c843201f3cd392aa",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "943e1802cf4fe26a",
+      "state": "9f333637e950ae01",
+      "local": "0",
+      "remote": "0",
+      "process": "var/run/mDNSResponder/",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "9f333637e950ae01",
+      "state": "943e1802cf4fe26a",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "1f7f848c2e28efe9",
+      "state": "0",
+      "local": "0",
+      "remote": "f987d82d93369615",
+      "process": "var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/com.google.Chrome.jik4HL/SingletonSocket/",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "8ce304cfe560127c",
+      "state": "3b072ea394a7b6f",
+      "local": "0",
+      "remote": "0",
+      "process": "var/run/mDNSResponder/",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "3b072ea394a7b6f",
+      "state": "8ce304cfe560127c",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "5c13cff26814019d",
+      "state": "ebf7b805f007e2f4",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "ebf7b805f007e2f4",
+      "state": "5c13cff26814019d",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "376450f16d374bb9",
+      "state": "b4c7779b684bbd3a",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "b4c7779b684bbd3a",
+      "state": "376450f16d374bb9",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "ad84488dc7dd9df6",
+      "state": "fc11e15243757d1d",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "fc11e15243757d1d",
+      "state": "ad84488dc7dd9df6",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "c532c914fbe9e2a4",
+      "state": "cd44ad5878ee2c2a",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "cd44ad5878ee2c2a",
+      "state": "c532c914fbe9e2a4",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "402b0877e53a3fb6",
+      "state": "0",
+      "local": "0",
+      "remote": "c3fcd2fcd71b2ea4",
+      "process": "var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/vscode-git-475b271955.sock/",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "fe83a97942b2b7f1",
+      "state": "b966d10b7e6ffa54",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "b966d10b7e6ffa54",
+      "state": "fe83a97942b2b7f1",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "7b5217cbe51a5630",
+      "state": "94522e9b6d9aedc6",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "94522e9b6d9aedc6",
+      "state": "7b5217cbe51a5630",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "75b4728874ab3cd",
+      "state": "5557abb764c735f8",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "5557abb764c735f8",
+      "state": "75b4728874ab3cd",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "88e3b9f88cea8963",
+      "state": "fde49c1b5fac0bd9",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "fde49c1b5fac0bd9",
+      "state": "88e3b9f88cea8963",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "71256e8533afc983",
+      "state": "9e81833dc13f89e",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "9e81833dc13f89e",
+      "state": "71256e8533afc983",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "aabe2ee1ec7261ab",
+      "state": "1da2748a5be2f544",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "1da2748a5be2f544",
+      "state": "aabe2ee1ec7261ab",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "504d7294f8cb648d",
+      "state": "309b9e12f49c96cb",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "309b9e12f49c96cb",
+      "state": "504d7294f8cb648d",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "6c8696e804f5cddb",
+      "state": "713b1835a126313c",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "713b1835a126313c",
+      "state": "6c8696e804f5cddb",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "2d3659818d5720f8",
+      "state": "85670e39c5c35367",
+      "local": "0",
+      "remote": "0",
+      "process": "var/run/mDNSResponder/",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "85670e39c5c35367",
+      "state": "2d3659818d5720f8",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "f6261d00afb424e7",
+      "state": "6cbb8b9d374a46f0",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "6cbb8b9d374a46f0",
+      "state": "f6261d00afb424e7",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "15c1d7b9dd6e643b",
+      "state": "5c9410da2c27ea3",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "5c9410da2c27ea3",
+      "state": "15c1d7b9dd6e643b",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "9af46290df2ce0d7",
+      "state": "6a5f12fc8a6fcce4",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "6a5f12fc8a6fcce4",
+      "state": "9af46290df2ce0d7",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "8ccaafc479a7d8ee",
+      "state": "0",
+      "local": "0",
+      "remote": "46b382a23b0cc2de",
+      "process": "Code/1.10-main.sock/Support",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "a48ffde45a19b537",
+      "state": "f8165a65d35ca8b4",
+      "local": "0",
+      "remote": "0",
+      "process": "var/run/mDNSResponder/",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "f8165a65d35ca8b4",
+      "state": "a48ffde45a19b537",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "c0d2543cb1f4e11",
+      "state": "f2e222a19dc43af6",
+      "local": "0",
+      "remote": "0",
+      "process": "var/run/mDNSResponder/",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "f2e222a19dc43af6",
+      "state": "c0d2543cb1f4e11",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "a2b28512895b9752",
+      "state": "3ce3dc91a4e02423",
+      "local": "0",
+      "remote": "0",
+      "process": "var/run/usbmuxd/",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "3ce3dc91a4e02423",
+      "state": "a2b28512895b9752",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "e75394c2f2b9ab09",
+      "state": "8dec6dcb2010ef6a",
+      "local": "0",
+      "remote": "0",
+      "process": "var/run/mDNSResponder/",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "8dec6dcb2010ef6a",
+      "state": "e75394c2f2b9ab09",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "c6d9a07842e821c6",
+      "state": "f5aebd316500410e",
+      "local": "0",
+      "remote": "0",
+      "process": "var/run/mDNSResponder/",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "f5aebd316500410e",
+      "state": "c6d9a07842e821c6",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "7ad7ee32f7720b99",
+      "state": "be7b05fed8db86f7",
+      "local": "0",
+      "remote": "0",
+      "process": "var/run/mDNSResponder/",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "be7b05fed8db86f7",
+      "state": "7ad7ee32f7720b99",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "db3881d94d3d1b37",
+      "state": "7021ca89022adc06",
+      "local": "0",
+      "remote": "0",
+      "process": "var/run/mDNSResponder/",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "7021ca89022adc06",
+      "state": "db3881d94d3d1b37",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "d5bc9e7329b29eb5",
+      "state": "a35112f0ff6f77a2",
+      "local": "0",
+      "remote": "0",
+      "process": "var/run/mDNSResponder/",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "a35112f0ff6f77a2",
+      "state": "d5bc9e7329b29eb5",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "7f89ddc6b469849f",
+      "state": "0",
+      "local": "0",
+      "remote": "54413e7701560243",
+      "process": "var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/com.spotify.client.GXIUQE/SingletonSocket/",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "39b77d0614926cab",
+      "state": "229a1be9490e49a9",
+      "local": "0",
+      "remote": "0",
+      "process": "var/run/mDNSResponder/",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "229a1be9490e49a9",
+      "state": "39b77d0614926cab",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "133c1552a83f18be",
+      "state": "e62e72352ebae289",
+      "local": "0",
+      "remote": "0",
+      "process": "var/run/mDNSResponder/",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "e62e72352ebae289",
+      "state": "133c1552a83f18be",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "a1ceb0f63b7497a0",
+      "state": "62d454d50ef73241",
+      "local": "0",
+      "remote": "0",
+      "process": "var/run/mDNSResponder/",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "62d454d50ef73241",
+      "state": "a1ceb0f63b7497a0",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "f7b41eba17e18514",
+      "state": "5e4dd59b369da8e0",
+      "local": "0",
+      "remote": "0",
+      "process": "var/run/mDNSResponder/",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "5e4dd59b369da8e0",
+      "state": "f7b41eba17e18514",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "1836b02318cbe14b",
+      "state": "fae76a5de49b950f",
+      "local": "0",
+      "remote": "0",
+      "process": "var/run/mDNSResponder/",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "fae76a5de49b950f",
+      "state": "1836b02318cbe14b",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "ad249555b12b145f",
+      "state": "36925648008a3b48",
+      "local": "0",
+      "remote": "0",
+      "process": "var/run/mDNSResponder/",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "36925648008a3b48",
+      "state": "ad249555b12b145f",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "33ca0b89b64819c7",
+      "state": "e9f13063c79355b9",
+      "local": "0",
+      "remote": "0",
+      "process": "var/run/mDNSResponder/",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "e9f13063c79355b9",
+      "state": "33ca0b89b64819c7",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "358315edc4e06e49",
+      "state": "b8c41e7fc613591d",
+      "local": "0",
+      "remote": "0",
+      "process": "var/run/mDNSResponder/",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "8500913d3297b3b6",
+      "state": "efa304b83d233f17",
+      "local": "0",
+      "remote": "0",
+      "process": "var/run/mDNSResponder/",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "efa304b83d233f17",
+      "state": "8500913d3297b3b6",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "b8c41e7fc613591d",
+      "state": "358315edc4e06e49",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "ca340aff75fff0e8",
+      "state": "2f206a62589738a4",
+      "local": "0",
+      "remote": "0",
+      "process": "var/run/mDNSResponder/",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "2f206a62589738a4",
+      "state": "ca340aff75fff0e8",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "8f419085f2e0680d",
+      "state": "a93eda81a28ef635",
+      "local": "0",
+      "remote": "0",
+      "process": "var/run/mDNSResponder/",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "a93eda81a28ef635",
+      "state": "8f419085f2e0680d",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "51592abd98383a34",
+      "state": "73960152d5041dd5",
+      "local": "0",
+      "remote": "0",
+      "process": "var/run/mDNSResponder/",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "73960152d5041dd5",
+      "state": "51592abd98383a34",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "4f9939ca8324a3c5",
+      "state": "47c8051af402fa56",
+      "local": "0",
+      "remote": "0",
+      "process": "var/run/mDNSResponder/",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "47c8051af402fa56",
+      "state": "4f9939ca8324a3c5",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "99e09a1dd49685eb",
+      "state": "95f851dca9ca0e34",
+      "local": "0",
+      "remote": "0",
+      "process": "var/run/mDNSResponder/",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "95f851dca9ca0e34",
+      "state": "99e09a1dd49685eb",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "e84b829ed742d647",
+      "state": "ed6a1e3e836d42ef",
+      "local": "0",
+      "remote": "0",
+      "process": "var/run/usbmuxd/",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "ed6a1e3e836d42ef",
+      "state": "e84b829ed742d647",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "b1a1373a6caea6ed",
+      "state": "8479c76f9e9681f7",
+      "local": "0",
+      "remote": "0",
+      "process": "var/run/mDNSResponder/",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "8479c76f9e9681f7",
+      "state": "b1a1373a6caea6ed",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "47bfba67ce9cc612",
+      "state": "0",
+      "local": "0",
+      "remote": "c3d2e4ccd4e3d0d9",
+      "process": "var/run/filesystemui.socket/",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "5b693ed7b9d02512",
+      "state": "0",
+      "local": "0",
+      "remote": "536ebfa201cafd4a",
+      "process": "var/run/com.apple.launchd.XP62C2YaN9/Listeners/",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "d03bc534b063c5e8",
+      "state": "901c3d435e232d76",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "901c3d435e232d76",
+      "state": "d03bc534b063c5e8",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "4f3d75002c961c9f",
+      "state": "0",
+      "local": "0",
+      "remote": "d0f82934137c407",
+      "process": "var/run/pppconfd/",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "a3b229f73053ca57",
+      "state": "0",
+      "local": "0",
+      "remote": "f10b2946349c5bcd",
+      "process": "var/run/usbmuxd/",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "b71fed99a069d30b",
+      "state": "0",
+      "local": "0",
+      "remote": "2048f6e0d7d71239",
+      "process": "var/rpc/ncalrpc/srvsvc/",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "66c199e4c85c1200",
+      "state": "0",
+      "local": "0",
+      "remote": "b962e10cb88cad7a",
+      "process": "var/rpc/ncacn_np/srvsvc/",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "d8370d6853d1c4e4",
+      "state": "0",
+      "local": "0",
+      "remote": "28636d3c6e12b22b",
+      "process": "var/rpc/ncalrpc/wkssvc/",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "db5da3e771ed19b3",
+      "state": "0",
+      "local": "0",
+      "remote": "ca5de628bdffa30c",
+      "process": "var/rpc/ncacn_np/wkssvc/",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "81240f94be8a37d1",
+      "state": "0",
+      "local": "0",
+      "remote": "14c3ef3f2e86fbbc",
+      "process": "var/rpc/ncacn_np/mdssvc/",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "c0d99f0cade258b1",
+      "state": "0",
+      "local": "0",
+      "remote": "1f83e48e184e6770",
+      "process": "var/rpc/ncalrpc/lsarpc/",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "2dfcd41c49efa420",
+      "state": "0",
+      "local": "0",
+      "remote": "b9f0b74135840d4e",
+      "process": "var/rpc/ncacn_np/lsarpc/",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "983cb75c5ef5ecef",
+      "state": "0",
+      "local": "0",
+      "remote": "bb3666e5905a913f",
+      "process": "var/run/mDNSResponder/",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "2383229b9bdaf3d0",
+      "state": "0",
+      "local": "0",
+      "remote": "46f8513a7df6e6cc",
+      "process": "var/run/systemkeychaincheck.socket/",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "7bccff92078312cd",
+      "state": "0",
+      "local": "0",
+      "remote": "336a0443145088b8",
+      "process": "private/var/run/.sim_diagnosticd_socket/",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "6d7a71971f0b5173",
+      "state": "0",
+      "local": "0",
+      "remote": "a15f49d8d6f3b0c4",
+      "process": "var/run/portmap.socket/",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "759d24eb9c581130",
+      "state": "0",
+      "local": "0",
+      "remote": "c40cfa560f95e0dc",
+      "process": "var/run/vpncontrol.sock/",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "a20259407704d1c",
+      "state": "0",
+      "local": "0",
+      "remote": "604c7b0f37f6d6d9",
+      "process": "var/rpc/ncalrpc/NETLOGON/",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "4766417bc40e8a3d",
+      "state": "0",
+      "local": "0",
+      "remote": "58a344c21ffa233e",
+      "process": "private/var/run/cupsd/",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "e4a1dd871ae3a9b2",
+      "state": "f5dab2a0bb66e0bd",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "f5dab2a0bb66e0bd",
+      "state": "e4a1dd871ae3a9b2",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "b115e502d73d2ffc",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "bcbe3d467842e5d5",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "54d1c728139e2bbd",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "406029517e45d284",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "e04fa0b314b4e916",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "691a0e8b5d2c3461",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "56cf047a7d2449c9",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "ee3bec36878994fc",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "aafb35755cdf2aa7",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "b8a8df0988faba2",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "cb049de985499c50",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "9f569e92b67a277b",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "9a9de9ff4aed4e16",
+      "state": "d64b6363ca437ef0",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "d64b6363ca437ef0",
+      "state": "9a9de9ff4aed4e16",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "20352b84f495839f",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "aae984b709eb8fa5",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "210474735c86754d",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "5c3e2621f8fbc82",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "e965f273a1d9666",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "9fcd100c5e2074fa",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "a56ddb9ca4091851",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "47eec18e410866e2",
+      "state": "347fa8c46e86d3ce",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "347fa8c46e86d3ce",
+      "state": "47eec18e410866e2",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "1ecaded56e695339",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "c81fcd08043682a0",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "dbed481da11419b",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "7c5bc8fd78152cb1",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "4512ac85b3b37b9b",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "46575d61abee6bb9",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "a2805559e2772a15",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "2383bd14b492ba3c",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "66f60aebc1631ceb",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "502778e3665b13a3",
+      "state": "cff44ded449542e8",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "cff44ded449542e8",
+      "state": "502778e3665b13a3",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "c03375e0f67d4f32",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "770d9972dabc0c83",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "6c4f9c8b6b37437f",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "cfc12db9d07f991c",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "cca107b3845129b3",
+      "state": "b92c3739005e909b",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "b92c3739005e909b",
+      "state": "cca107b3845129b3",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "a33b2c07e6a6c66d",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "d28bad1758c667a9",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "f17db6ae15aadf04",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "b68e02ae85ab1ab6",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "4e35be578f005cb5",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "fa71303b889f3d40",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "7a1dbe009dddaf60",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "b414c8d4a0158c0e",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "30a74e03eddc8b9a",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "4fde2f165f981c62",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "5f3f8d538362376a",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "55bb14963bda6f87",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "d5ca4ff56c2964ea",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "28d9e05c95c24a35",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "b9d7923eab05d1af",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "3f33032d19acbe9d",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "29fc19034a4b7c27",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "6c4abcebfb19804d",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "ec80c0bb9e52dab6",
+      "state": "d49bcd743ab2b59b",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "d49bcd743ab2b59b",
+      "state": "ec80c0bb9e52dab6",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "a90cc0902ba8116f",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "2b582ef7f2a97b16",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "d77ff022af7d2fa4",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "442f80048399f58e",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "960972070e6ab9d3",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "7df073f3d30b35b7",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "f7235d609e36e42d",
+      "state": "57acf29244867afa",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "57acf29244867afa",
+      "state": "f7235d609e36e42d",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "9ef142e4aae1fd26",
+      "state": "f2ba5a39f2e32e6e",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "f2ba5a39f2e32e6e",
+      "state": "9ef142e4aae1fd26",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "ad3184391919abe3",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "6aee1cec414cb23f",
+      "state": "c954ca1ef73d4856",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "c954ca1ef73d4856",
+      "state": "6aee1cec414cb23f",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "e323544578097fe4",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "86a4c37f4517f904",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "6e3243b981325e9",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "1ff2baeda882b45e",
+      "state": "6b583108acf9ac23",
+      "local": "0",
+      "remote": "0",
+      "process": "-/-",
+      "risk": "LOW",
+      "flags": ""
+    },
+    {
+      "proto": "6b583108acf9ac23",
+      "state": "0",
+      "local": "0",
+      "remote": "3eb673ad628e1276",
+      "process": "private//var/run/syslog/",
+      "risk": "LOW",
+      "flags": ""
+    }
+  ],
+  "file_checks": [
+    {
+      "path": "/etc/passwd",
+      "status": "NEW",
+      "sha256": "5676bbb620dfd6c54c49...",
+      "permissions": "0o644",
+      "owner": "root",
+      "modified": "2026-04-06 10:10:57",
+      "world_write": "no"
+    },
+    {
+      "path": "/etc/hosts",
+      "status": "NEW",
+      "sha256": "c7dd0e2ed261ce76d76f...",
+      "permissions": "0o644",
+      "owner": "root",
+      "modified": "2026-04-06 10:10:57",
+      "world_write": "no"
+    },
+    {
+      "path": "/private/etc/sudoers",
+      "status": "NO ACCESS",
+      "sha256": "PERMISSION_DENIED...",
+      "permissions": "0o440",
+      "owner": "root",
+      "modified": "2026-04-06 10:10:57",
+      "world_write": "no"
+    },
+    {
+      "path": "/etc/ssh/sshd_config",
+      "status": "NEW",
+      "sha256": "d98b8a857e705ed52978...",
+      "permissions": "0o644",
+      "owner": "root",
+      "modified": "2025-01-15 11:52:07",
+      "world_write": "no"
+    },
+    {
+      "path": "/Library/LaunchDaemons",
+      "status": "NO ACCESS",
+      "sha256": "ERROR...",
+      "permissions": "0o755",
+      "owner": "root",
+      "modified": "2026-04-13 18:44:06",
+      "world_write": "no"
+    },
+    {
+      "path": "/Library/LaunchAgents",
+      "status": "NO ACCESS",
+      "sha256": "ERROR...",
+      "permissions": "0o755",
+      "owner": "root",
+      "modified": "2026-04-06 10:10:57",
+      "world_write": "no"
+    }
+  ]
+}

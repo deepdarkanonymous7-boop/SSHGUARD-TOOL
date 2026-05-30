@@ -1,0 +1,12 @@
+# SSHGuard v2.0 — Python Requirements
+#
+# SSHGuard is designed to run on Python 3.7+ with ZERO external dependencies.
+# All modules use the Python standard library only.
+#
+# Optional enhancements (install with: pip install <package>):
+#   psutil>=5.9.0   — more accurate CPU/memory per-process metrics
+#   pyyaml>=6.0     — enables full YAML config parsing (vs simple key:value fallback)
+#
+# The tool works without any of the above.
+# To install optionals:
+#   pip install psutil pyyaml

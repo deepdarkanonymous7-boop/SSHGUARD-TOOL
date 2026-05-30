@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SSHGuard Report — Mac.station</title>
+<style>
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:#0d0d0d; color:#ccc; font-family:'Courier New',monospace; font-size:13px; }
+  .container { max-width:1100px; margin:0 auto; padding:32px 16px; }
+  header { border-bottom:1px solid #222; padding-bottom:24px; margin-bottom:32px; }
+  header h1 { color:#00ff88; font-size:22px; letter-spacing:2px; }
+  header p { color:#555; margin-top:4px; }
+  .meta { display:flex; flex-wrap:wrap; gap:24px; margin-top:16px; }
+  .meta-item { background:#111; border:1px solid #1e1e1e; border-radius:4px; padding:10px 16px; }
+  .meta-item label { color:#555; font-size:11px; display:block; }
+  .meta-item span { color:#ccc; font-size:14px; }
+  .threat-level { color:#ff4444; font-size:18px; font-weight:bold; }
+  .section { margin-bottom:40px; }
+  .section h2 { color:#00ff88; font-size:13px; letter-spacing:1px; text-transform:uppercase;
+                 border-bottom:1px solid #1a1a1a; padding-bottom:8px; margin-bottom:16px; }
+  .alert-card { background:#111; border:1px solid #1e1e1e; border-radius:4px;
+                 margin-bottom:12px; padding:12px 16px; }
+  .alert-header { display:flex; align-items:center; gap:10px; margin-bottom:6px; }
+  .badge { padding:2px 8px; border-radius:3px; color:#000; font-weight:bold;
+            font-size:11px; text-transform:uppercase; }
+  .alert-body p { color:#aaa; margin:4px 0 8px; }
+  .tag { background:#1a1a1a; border:1px solid #333; border-radius:3px;
+          padding:2px 7px; font-size:11px; color:#777; margin-right:6px; }
+  .mitre { color:#9966ff; border-color:#9966ff33; }
+  .ts { margin-left:auto; color:#444; font-size:11px; }
+  table { width:100%; border-collapse:collapse; }
+  th,td { text-align:left; padding:7px 10px; border-bottom:1px solid #1a1a1a; font-size:12px; }
+  th { color:#00ff88; background:#0d0d0d; }
+  tr:hover { background:#111; }
+  .stats-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:12px; margin-bottom:32px; }
+  .stat-card { background:#111; border:1px solid #1e1e1e; border-radius:4px; padding:16px; text-align:center; }
+  .stat-num { font-size:28px; font-weight:bold; }
+  .stat-label { color:#555; font-size:11px; margin-top:4px; }
+  footer { border-top:1px solid #1a1a1a; padding-top:20px; color:#333; text-align:center; font-size:11px; }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>SSHGuard v2.0 — Security Scan Report</h1>
+    <p>Defensive SSH &amp; System Monitor</p>
+    <div class="meta">
+      <div class="meta-item"><label>Host</label><span>Mac.station</span></div>
+      <div class="meta-item"><label>OS</label><span>Darwin 25.4.0</span></div>
+      <div class="meta-item"><label>User</label><span>francescodichiara</span></div>
+      <div class="meta-item"><label>Scan Time</label><span>2026-05-30T20:27:38</span></div>
+      <div class="meta-item"><label>Duration</label><span>15.13s</span></div>
+      <div class="meta-item"><label>Threat Level</label><span class="threat-level">CRITICAL</span></div>
+    </div>
+  </header>
+
+  <div class="stats-grid">
+    <div class="stat-card"><div class="stat-num" style="color:#ff4444">2</div><div class="stat-label">CRITICAL</div></div>
+    <div class="stat-card"><div class="stat-num" style="color:#ff9900">53</div><div class="stat-label">HIGH</div></div>
+    <div class="stat-card"><div class="stat-num" style="color:#00ccff">0</div><div class="stat-label">MEDIUM</div></div>
+    <div class="stat-card"><div class="stat-num" style="color:#33ff66">0</div><div class="stat-label">LOW</div></div>
+    <div class="stat-card"><div class="stat-num" style="color:#aaa">55</div><div class="stat-label">TOTAL</div></div>
+    <div class="stat-card"><div class="stat-num" style="color:#9966ff">3380</div><div class="stat-label">RISK SCORE</div></div>
+  </div>
+
+  <div class="section">
+    <h2>Security Alerts</h2>
+    
+                <div class="alert-card" style="border-left:4px solid #ff4444">
+                  <div class="alert-header">
+                    <span class="badge" style="background:#ff4444">CRITICAL</span>
+                    <strong>SSH Agent Socket Hijack — Listeners</strong>
+                    <span class="ts">2026-05-30T20:27:39</span>
+                  </div>
+                  <div class="alert-body">
+                    <p>Socket '/var/run/com.apple.launchd.XP62C2YaN9/Listeners' (owner: francescodichiara) is being accessed by 47 concurrent processes: PIDs [400, 581, 589, 608, 612, 615] (loginwind, distnoted, UserEvent, rapportd). This is the signature of SSH agent hijacking / credential theft.</p>
+                    <span class="tag">SSH Hijacking</span>
+                    <span class="tag mitre">T1563.001 — Remote Service Session Hijacking: SSH Hijacking</span>
+                    <span class="tag">PID: 400</span>
+                    <span class="tag">Path: /var/run/com.apple.launchd.XP62C2YaN9/Listeners</span>
+                  </div>
+                </div>
+
+                <div class="alert-card" style="border-left:4px solid #ff4444">
+                  <div class="alert-header">
+                    <span class="badge" style="background:#ff4444">CRITICAL</span>
+                    <strong>SSH Agent Socket Hijack — s.coeWVMlEmb.agent.XQ7bnJPmyx</strong>
+                    <span class="ts">2026-05-30T20:27:39</span>
+                  </div>
+                  <div class="alert-body">
+                    <p>Socket '/Users/francescodichiara/.ssh/agent/s.coeWVMlEmb.agent.XQ7bnJPmyx' (owner: francescodichiara) is being accessed by 47 concurrent processes: PIDs [400, 581, 589, 608, 612, 615] (loginwind, distnoted, UserEvent, rapportd). This is the signature of SSH agent hijacking / credential theft.</p>
+                    <span class="tag">SSH Hijacking</span>
+                    <span class="tag mitre">T1563.001 — Remote Service Session Hijacking: SSH Hijacking</span>
+                    <span class="tag">PID: 400</span>
+                    <span class="tag">Path: /Users/francescodichiara/.ssh/agent/s.coeWVMlEmb.agent.XQ7bnJPmyx</span>
+                  </div>
+                </div>
+
+                <div class="alert-card" style="border-left:4px solid #ff9900">
+                  <div class="alert-header">
+                    <span class="badge" style="background:#ff9900">HIGH</span>
+                    <strong>High-Risk SSH Agent Socket</strong>
+                    <span class="ts">2026-05-30T20:27:38</span>
+                  </div>
+                  <div class="alert-body">
+                    <p>Socket '/var/run/mDNSResponder' owned by root (uid=0) or in suspicious location. Root-owned agent sockets can be leveraged for privilege escalation.</p>
+                    <span class="tag">SSH Hijacking</span>
+                    <span class="tag mitre">T1552.004 — Unsecured Credentials: Private Keys</span>
+                    
+                    <span class="tag">Path: /var/run/mDNSResponder</span>
+                  </div>
+                </div>
+
+                <div class="alert-card" style="border-left:4px solid #ff9900">
+                  <div class="alert-header">
+                    <span class="badge" style="background:#ff9900">HIGH</span>
+                    <strong>High-Risk SSH Agent Socket</strong>
+                    <span class="ts">2026-05-30T20:27:38</span>
+                  </div>
+                  <div class="alert-body">
+                    <p>Socket '/var/run/syslog' owned by root (uid=0) or in suspicious location. Root-owned agent sockets can be leveraged for privilege escalation.</p>
+                    <span class="tag">SSH Hijacking</span>
+                    <span class="tag mitre">T1552.004 — Unsecured Credentials: Private Keys</span>
+                    
+                    <span class="tag">Path: /var/run/syslog</span>
+                  </div>
+                </div>
+
+                <div class="alert-card" style="border-left:4px solid #ff9900">
+                  <div class="alert-header">
+                    <span class="badge" style="background:#ff9900">HIGH</span>
+                    <strong>High-Risk SSH Agent Socket</strong>
+                    <span class="ts">2026-05-30T20:27:38</span>
+                  </div>
+                  <div class="alert-body">
+                    <p>Socket '/var/run/vpncontrol.sock' owned by root (uid=0) or in suspicious location. Root-owned agent sockets can be leveraged for privilege escalation.</p>
+                    <span class="tag">SSH Hijacking</span>
+                    <span class="tag mitre">T1552.004 — Unsecured Credentials: Private Keys</span>
+                    
+                    <span class="tag">Path: /var/run/vpncontrol.sock</span>
+                  </div>
+                </div>
+
+                <div class="alert-card" style="border-left:4px solid #ff9900">
+                  <div class="alert-header">
+                    <span class="badge" style="background:#ff9900">HIGH</span>
+                    <strong>High-Risk SSH Agent Socket</strong>
+                    <span class="ts">2026-05-30T20:27:38</span>
+                  </div>
+                  <div class="alert-body">
+                    <p>Socket '/var/run/cupsd' owned by root (uid=0) or in suspicious location. Root-owned agent sockets can be leveraged for privilege escalation.</p>
+                    <span class="tag">SSH Hijacking</span>
+                    <span class="tag mitre">T1552.004 — Unsecured Credentials: Private Keys</span>
+                    
+                    <span class="tag">Path: /var/run/cupsd</span>
+                  </div>
+                </div>
+
+                <div class="alert-card" style="border-left:4px solid #ff9900">
+                  <div class="alert-header">
+                    <span class="badge" style="background:#ff9900">HIGH</span>
+                    <strong>High-Risk SSH Agent Socket</strong>
+                    <span class="ts">2026-05-30T20:27:38</span>
+                  </div>
+                  <div class="alert-body">
+                    <p>Socket '/var/run/pppconfd' owned by root (uid=0) or in suspicious location. Root-owned agent sockets can be leveraged for privilege escalation.</p>
+                    <span class="tag">SSH Hijacking</span>
+                    <span class="tag mitre">T1552.004 — Unsecured Credentials: Private Keys</span>
+                    
+                    <span class="tag">Path: /var/run/pppconfd</span>
+                  </div>
+                </div>
+
+                <div class="alert-card" style="border-left:4px solid #ff9900">
+                  <div class="alert-header">
+                    <span class="badge" style="background:#ff9900">HIGH</span>
+                    <strong>High-Risk SSH Agent Socket</strong>
+                    <span class="ts">2026-05-30T20:27:38</span>
+                  </div>
+                  <div class="alert-body">
+                    <p>Socket '/var/run/portmap.socket' owned by root (uid=0) or in suspicious location. Root-owned agent sockets can be leveraged for privilege escalation.</p>
+                    <span class="tag">SSH Hijacking</span>
+                    <span class="tag mitre">T1552.004 — Unsecured Credentials: Private Keys</span>
+                    
+                    <span class="tag">Path: /var/run/portmap.socket</span>
+                  </div>
+                </div>
+
+                <div class="alert-card" style="border-left:4px solid #ff9900">
+                  <div class="alert-header">
+                    <span class="badge" style="background:#ff9900">HIGH</span>
+                    <strong>High-Risk SSH Agent Socket</strong>
+                    <span class="ts">2026-05-30T20:27:38</span>
+                  </div>
+                  <div class="alert-body">
+                    <p>Socket '/var/run/systemkeychaincheck.socket' owned by root (uid=0) or in suspicious location. Root-owned agent sockets can be leveraged for privilege escalation.</p>
+                    <span class="tag">SSH Hijacking</span>
+                    <span class="tag mitre">T1552.004 — Unsecured Credentials: Private Keys</span>
+                    
+                    <span class="tag">Path: /var/run/systemkeychaincheck.socket</span>
+                  </div>
+                </div>
+
+                <div class="alert-card" style="border-left:4px solid #ff9900">
+                  <div class="alert-header">
+                    <span class="badge" style="background:#ff9900">HIGH</span>
+                    <strong>High-Risk SSH Agent Socket</strong>
+                    <span class="ts">2026-05-30T20:27:38</span>
+                  </div>
+                  <div class="alert-body">
+                    <p>Socket '/var/run/usbmuxd' owned by root (uid=0) or in suspicious location. Root-owned agent sockets can be leveraged for privilege escalation.</p>
+                    <span class="tag">SSH Hijacking</span>
+                    <span class="tag mitre">T1552.004 — Unsecured Credentials: Private Keys</span>
+                    
+                    <span class="tag">Path: /var/run/usbmuxd</span>
+                  </div>
+                </div>
+
+                <div class="alert-card" style="border-left:4px solid #ff9900">
+                  <div class="alert-header">
+                    <span class="badge" style="background:#ff9900">HIGH</span>
+                    <strong>High-Risk SSH Agent Socket</strong>
+                    <span class="ts">2026-05-30T20:27:38</span>
+                  </div>
+                  <div class="alert-body">
+                    <p>Socket '/var/run/.sim_diagnosticd_socket' owned by root (uid=0) or in suspicious location. Root-owned agent sockets can be leveraged for privilege escalation.</p>
+                    <span class="tag">SSH Hijacking</span>
+                    <span class="tag mitre">T1552.004 — Unsecured Credentials: Private Keys</span>
+                    
+                    <span class="tag">Path: /var/run/.sim_diagnosticd_socket</span>
+                  </div>
+                </div>
+
+                <div class="alert-card" style="border-left:4px solid #ff9900">
+                  <div class="alert-header">
+                    <span class="badge" style="background:#ff9900">HIGH</span>
+                    <strong>Suspicious Process: Core Audio Driver (ParrotAudioPlugin.driver) (PID 479)</strong>
+                    <span class="ts">2026-05-30T20:27:40</span>
+                  </div>
+                  <div class="alert-body">
+                    <p>Process 'Core Audio Driver (ParrotAudioPlugin.driver)' (PID 479, user '_coreaudiod') flagged: Possible process name masquerade. Command: Core Audio Driver (ParrotAudioPlugin.driver)</p>
+                    <span class="tag">Suspicious Process</span>
+                    <span class="tag mitre">T1036 — Masquerading</span>
+                    <span class="tag">PID: 479</span>
+                    
+                  </div>
+                </div>
+
+                <div class="alert-card" style="border-left:4px solid #ff9900">
+                  <div class="alert-header">
+                    <span class="badge" style="background:#ff9900">HIGH</span>
+                    <strong>Suspicious Process: /System/Library/CoreServices/Software Update.app/Contents/Resources/suhelperd (PID 552)</strong>
+                    <span class="ts">2026-05-30T20:27:40</span>
+                  </div>
+                  <div class="alert-body">
+                    <p>Process '/System/Library/CoreServices/Software Update.app/Contents/Resources/suhelperd' (PID 552, user 'root') flagged: Possible process name masquerade. Command: /System/Library/CoreServices/Software Update.app/Contents/Resources/suhelperd</p>
+                    <span class="tag">Suspicious Process</span>
+                    <span class="tag mitre">T1036 — Masquerading</span>
+                    <span class="tag">PID: 552</span>
+                    
+                  </div>
+                </div>
+
+                <div class="alert-card" style="border-left:4px solid #ff9900">
+                  <div class="alert-header">
+                    <span class="badge" style="background:#ff9900">HIGH</span>
+                    <strong>Suspicious Process: /System/Library/CoreServices/Software Update.app/Contents/Resources/softwareupdated (PID 556)</strong>
+                    <span class="ts">2026-05-30T20:27:40</span>
+                  </div>
+                  <div class="alert-body">
+                    <p>Process '/System/Library/CoreServices/Software Update.app/Contents/Resources/softwareupdated' (PID 556, user '_softwareupdate') flagged: Possible process name masquerade. Command: /System/Library/CoreServices/Software Update.app/Contents/Resources/softwareupdated</p>
+                    <span class="tag">Suspicious Process</span>
+                    <span class="tag mitre">T1036 — Masquerading</span>
+                    <span class="tag">PID: 556</span>
+                    
+                  </div>
+                </div>
+
+                <div class="alert-card" style="border-left:4px solid #ff9900">
+                  <div class="alert-header">
+                    <span class="badge" style="background:#ff9900">HIGH</span>
+                    <strong>Suspicious Process: /System/Library/Input Methods/PressAndHold.app/Contents/PlugIns/PAH_Extension.appex/Contents/MacOS/PAH_Extension (PID 732)</strong>
+                    <span class="ts">2026-05-30T20:27:40</span>
+                  </div>
+                  <div class="alert-body">
+                    <p>Process '/System/Library/Input Methods/PressAndHold.app/Contents/PlugIns/PAH_Extension.appex/Contents/MacOS/PAH_Extension' (PID 732, user 'francescodichiara') flagged: Possible process name masquerade. Command: /System/Library/Input Methods/PressAndHold.app/Contents/PlugIns/PAH_Extension.appex/Contents/MacOS/PAH_Extension -App...</p>
+                    <span class="tag">Suspicious Process</span>
+                    <span class="tag mitre">T1036 — Masquerading</span>
+                    <span class="tag">PID: 732</span>
+                    
+                  </div>
+                </div>
+
+                <div class="alert-card" style="border-left:4px solid #ff9900">
+                  <div class="alert-header">
+                    <span class="badge" style="background:#ff9900">HIGH</span>
+                    <strong>Suspicious Process: /System/Library/Image Capture/Support/icdd (PID 746)</strong>
+                    <span class="ts">2026-05-30T20:27:40</span>
+                  </div>
+                  <div class="alert-body">
+                    <p>Process '/System/Library/Image Capture/Support/icdd' (PID 746, user 'francescodichiara') flagged: Possible process name masquerade. Command: /System/Library/Image Capture/Support/icdd</p>
+                    <span class="tag">Suspicious Process</span>
+                    <span class="tag mitre">T1036 — Masquerading</span>
+                    <span class="tag">PID: 746</span>
+                    
+                  </div>
+                </div>
+
+                <div class="alert-card" style="border-left:4px solid #ff9900">
+                  <div class="alert-header">
+                    <span class="badge" style="background:#ff9900">HIGH</span>
+                    <strong>Suspicious Process: /Applications/Spotify.app/Contents/Frameworks/Spotify Helper.app/Contents/MacOS/Spotify Helper (PID 778)</strong>
+                    <span class="ts">2026-05-30T20:27:40</span>
+                  </div>
+                  <div class="alert-body">
+                    <p>Process '/Applications/Spotify.app/Contents/Frameworks/Spotify Helper.app/Contents/MacOS/Spotify Helper' (PID 778, user 'francescodichiara') flagged: Possible process name masquerade. Command: /Applications/Spotify.app/Contents/Frameworks/Spotify Helper.app/Contents/MacOS/Spotify Helper --monitor-self-annotat...</p>
+                    <span class="tag">Suspicious Process</span>
+                    <span class="tag mitre">T1036 — Masquerading</span>
+                    <span class="tag">PID: 778</span>
+                    
+                  </div>
+                </div>
+
+                <div class="alert-card" style="border-left:4px solid #ff9900">
+                  <div class="alert-header">
+                    <span class="badge" style="background:#ff9900">HIGH</span>
+                    <strong>Suspicious Process: /Applications/Spotify.app/Contents/Frameworks/Spotify Helper.app/Contents/MacOS/Spotify Helper (PID 782)</strong>
+                    <span class="ts">2026-05-30T20:27:40</span>
+                  </div>
+                  <div class="alert-body">
+                    <p>Process '/Applications/Spotify.app/Contents/Frameworks/Spotify Helper.app/Contents/MacOS/Spotify Helper' (PID 782, user 'francescodichiara') flagged: Possible process name masquerade. Command: /Applications/Spotify.app/Contents/Frameworks/Spotify Helper.app/Contents/MacOS/Spotify Helper --type=gpu-process --s...</p>
+                    <span class="tag">Suspicious Process</span>
+                    <span class="tag mitre">T1036 — Masquerading</span>
+                    <span class="tag">PID: 782</span>
+                    
+                  </div>
+                </div>
+
+                <div class="alert-card" style="border-left:4px solid #ff9900">
+                  <div class="alert-header">
+                    <span class="badge" style="background:#ff9900">HIGH</span>
+                    <strong>Suspicious Process: /Applications/Spotify.app/Contents/Frameworks/Spotify Helper.app/Contents/MacOS/Spotify Helper (PID 783)</strong>
+                    <span class="ts">2026-05-30T20:27:40</span>
+                  </div>
+                  <div class="alert-body">
+                    <p>Process '/Applications/Spotify.app/Contents/Frameworks/Spotify Helper.app/Contents/MacOS/Spotify Helper' (PID 783, user 'francescodichiara') flagged: Possible process name masquerade. Command: /Applications/Spotify.app/Contents/Frameworks/Spotify Helper.app/Contents/MacOS/Spotify Helper --type=utility --utili...</p>
+                    <span class="tag">Suspicious Process</span>
+                    <span class="tag mitre">T1036 — Masquerading</span>
+                    <span class="tag">PID: 783</span>
+                    
+                  </div>
+                </div>
+
+                <div class="alert-card" style="border-left:4px solid #ff9900">
+                  <div class="alert-header">
+                    <span class="badge" style="background:#ff9900">HIGH</span>
+                    <strong>Suspicious Process: /Applications/Spotify.app/Contents/Frameworks/Spotify Helper.app/Contents/MacOS/Spotify Helper (PID 789)</strong>
+                    <span class="ts">2026-05-30T20:27:40</span>
+                  </div>
+                  <div class="alert-body">
+                    <p>Process '/Applications/Spotify.app/Contents/Frameworks/Spotify Helper.app/Contents/MacOS/Spotify Helper' (PID 789, user 'francescodichiara') flagged: Possible process name masquerade. Command: /Applications/Spotify.app/Contents/Frameworks/Spotify Helper.app/Contents/MacOS/Spotify Helper --type=utility --utili...</p>
+                    <span class="tag">Suspicious Process</span>
+                    <span class="tag mitre">T1036 — Masquerading</span>
+                    <span class="tag">PID: 789</span>
+                    
+                  </div>
+                </div>
+
+                <div class="alert-card" style="border-left:4px solid #ff9900">
+                  <div class="alert-header">
+                    <span class="badge" style="background:#ff9900">HIGH</span>
+                    <strong>Suspicious Process: /Applications/Spotify.app/Contents/Frameworks/Spotify Helper (Renderer).app/Contents/MacOS/Spotify Helper (Renderer) (PID 816)</strong>
+                    <span class="ts">2026-05-30T20:27:40</span>
+                  </div>
+                  <div class="alert-body">
+                    <p>Process '/Applications/Spotify.app/Contents/Frameworks/Spotify Helper (Renderer).app/Contents/MacOS/Spotify Helper (Renderer)' (PID 816, user 'francescodichiara') flagged: Possible process name masquerade. Command: /Applications/Spotify.app/Contents/Frameworks/Spotify Helper (Renderer).app/Contents/MacOS/Spotify Helper (Renderer) ...</p>
+                    <span class="tag">Suspicious Process</span>
+                    <span class="tag mitre">T1036 — Masquerading</span>
+                    <span class="tag">PID: 816</span>
+                    
+                  </div>
+                </div>
+
+                <div class="alert-card" style="border-left:4px solid #ff9900">
+                  <div class="alert-header">
+                    <span class="badge" style="background:#ff9900">HIGH</span>
+                    <strong>Suspicious Process: /Applications/Spotify.app/Contents/Frameworks/Spotify Helper.app/Contents/MacOS/Spotify Helper (PID 850)</strong>
+                    <span class="ts">2026-05-30T20:27:40</span>
+                  </div>
+                  <div class="alert-body">
+                    <p>Process '/Applications/Spotify.app/Contents/Frameworks/Spotify Helper.app/Contents/MacOS/Spotify Helper' (PID 850, user 'francescodichiara') flagged: Possible process name masquerade. Command: /Applications/Spotify.app/Contents/Frameworks/Spotify Helper.app/Contents/MacOS/Spotify Helper --type=utility --utili...</p>
+                    <span class="tag">Suspicious Process</span>
+                    <span class="tag mitre">T1036 — Masquerading</span>
+                    <span class="tag">PID: 850</span>
+                    
+                  </div>
+                </div>
+
+                <div class="alert-card" style="border-left:4px solid #ff9900">
+                  <div class="alert-header">
+                    <span class="badge" style="background:#ff9900">HIGH</span>
+                    <strong>Suspicious Process: /System/Library/CoreServices/Keychain Circle Notification.app/Contents/MacOS/Keychain Circle Notification (PID 944)</strong>
+                    <span class="ts">2026-05-30T20:27:40</span>
+                  </div>
+                  <div class="alert-body">
+                    <p>Process '/System/Library/CoreServices/Keychain Circle Notification.app/Contents/MacOS/Keychain Circle Notification' (PID 944, user 'francescodichiara') flagged: Possible process name masquerade. Command: /System/Library/CoreServices/Keychain Circle Notification.app/Contents/MacOS/Keychain Circle Notification</p>
+                    <span class="tag">Suspicious Process</span>
+                    <span class="tag mitre">T1036 — Masquerading</span>
+                    <span class="tag">PID: 944</span>
+                    
+                  </div>
+                </div>
+
+                <div class="alert-card" style="border-left:4px solid #ff9900">
+                  <div class="alert-header">
+                    <span class="badge" style="background:#ff9900">HIGH</span>
+                    <strong>Suspicious Process: /private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/MacOS/Electron (PID 1061)</strong>
+                    <span class="ts">2026-05-30T20:27:40</span>
+                  </div>
+                  <div class="alert-body">
+                    <p>Process '/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/MacOS/Electron' (PID 1061, user 'francescodichiara') flagged: Possible process name masquerade. Command: /private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visu...</p>
+                    <span class="tag">Suspicious Process</span>
+                    <span class="tag mitre">T1036 — Masquerading</span>
+                    <span class="tag">PID: 1061</span>
+                    
+                  </div>
+                </div>
+
+                <div class="alert-card" style="border-left:4px solid #ff9900">
+                  <div class="alert-header">
+                    <span class="badge" style="background:#ff9900">HIGH</span>
+                    <strong>Suspicious Process: /var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Electron Framework.framework/Helpers/chrome_crashpad_handler (PID 1070)</strong>
+                    <span class="ts">2026-05-30T20:27:40</span>
+                  </div>
+                  <div class="alert-body">
+                    <p>Process '/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Electron Framework.framework/Helpers/chrome_crashpad_handler' (PID 1070, user 'francescodichiara') flagged: Possible process name masquerade. Command: /var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studi...</p>
+                    <span class="tag">Suspicious Process</span>
+                    <span class="tag mitre">T1036 — Masquerading</span>
+                    <span class="tag">PID: 1070</span>
+                    
+                  </div>
+                </div>
+
+                <div class="alert-card" style="border-left:4px solid #ff9900">
+                  <div class="alert-header">
+                    <span class="badge" style="background:#ff9900">HIGH</span>
+                    <strong>Suspicious Process: /private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper (GPU).app/Contents/MacOS/Code Helper (GPU) (PID 1071)</strong>
+                    <span class="ts">2026-05-30T20:27:40</span>
+                  </div>
+                  <div class="alert-body">
+                    <p>Process '/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper (GPU).app/Contents/MacOS/Code Helper (GPU)' (PID 1071, user 'francescodichiara') flagged: Possible process name masquerade. Command: /private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visu...</p>
+                    <span class="tag">Suspicious Process</span>
+                    <span class="tag mitre">T1036 — Masquerading</span>
+                    <span class="tag">PID: 1071</span>
+                    
+                  </div>
+                </div>
+
+                <div class="alert-card" style="border-left:4px solid #ff9900">
+                  <div class="alert-header">
+                    <span class="badge" style="background:#ff9900">HIGH</span>
+                    <strong>Suspicious Process: /private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper.app/Contents/MacOS/Code Helper (PID 1072)</strong>
+                    <span class="ts">2026-05-30T20:27:40</span>
+                  </div>
+                  <div class="alert-body">
+                    <p>Process '/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper.app/Contents/MacOS/Code Helper' (PID 1072, user 'francescodichiara') flagged: Possible process name masquerade. Command: /private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visu...</p>
+                    <span class="tag">Suspicious Process</span>
+                    <span class="tag mitre">T1036 — Masquerading</span>
+                    <span class="tag">PID: 1072</span>
+                    
+                  </div>
+                </div>
+
+                <div class="alert-card" style="border-left:4px solid #ff9900">
+                  <div class="alert-header">
+                    <span class="badge" style="background:#ff9900">HIGH</span>
+                    <strong>Suspicious Process: /private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper (Renderer).app/Contents/MacOS/Code Helper (Renderer) (PID 1082)</strong>
+                    <span class="ts">2026-05-30T20:27:40</span>
+                  </div>
+                  <div class="alert-body">
+                    <p>Process '/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper (Renderer).app/Contents/MacOS/Code Helper (Renderer)' (PID 1082, user 'francescodichiara') flagged: Possible process name masquerade. Command: /private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visu...</p>
+                    <span class="tag">Suspicious Process</span>
+                    <span class="tag mitre">T1036 — Masquerading</span>
+                    <span class="tag">PID: 1082</span>
+                    
+                  </div>
+                </div>
+
+                <div class="alert-card" style="border-left:4px solid #ff9900">
+                  <div class="alert-header">
+                    <span class="badge" style="background:#ff9900">HIGH</span>
+                    <strong>Suspicious Process: /private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper.app/Contents/MacOS/Code Helper (PID 1095)</strong>
+                    <span class="ts">2026-05-30T20:27:40</span>
+                  </div>
+                  <div class="alert-body">
+                    <p>Process '/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper.app/Contents/MacOS/Code Helper' (PID 1095, user 'francescodichiara') flagged: Possible process name masquerade. Command: /private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visu...</p>
+                    <span class="tag">Suspicious Process</span>
+                    <span class="tag mitre">T1036 — Masquerading</span>
+                    <span class="tag">PID: 1095</span>
+                    
+                  </div>
+                </div>
+
+                <div class="alert-card" style="border-left:4px solid #ff9900">
+                  <div class="alert-header">
+                    <span class="badge" style="background:#ff9900">HIGH</span>
+                    <strong>Suspicious Process: /private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper.app/Contents/MacOS/Code Helper (PID 1096)</strong>
+                    <span class="ts">2026-05-30T20:27:40</span>
+                  </div>
+                  <div class="alert-body">
+                    <p>Process '/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper.app/Contents/MacOS/Code Helper' (PID 1096, user 'francescodichiara') flagged: Possible process name masquerade. Command: /private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visu...</p>
+                    <span class="tag">Suspicious Process</span>
+                    <span class="tag mitre">T1036 — Masquerading</span>
+                    <span class="tag">PID: 1096</span>
+                    
+                  </div>
+                </div>
+
+                <div class="alert-card" style="border-left:4px solid #ff9900">
+                  <div class="alert-header">
+                    <span class="badge" style="background:#ff9900">HIGH</span>
+                    <strong>Suspicious Process: /private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin) (PID 1097)</strong>
+                    <span class="ts">2026-05-30T20:27:40</span>
+                  </div>
+                  <div class="alert-body">
+                    <p>Process '/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin)' (PID 1097, user 'francescodichiara') flagged: Possible process name masquerade. Command: /private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visu...</p>
+                    <span class="tag">Suspicious Process</span>
+                    <span class="tag mitre">T1036 — Masquerading</span>
+                    <span class="tag">PID: 1097</span>
+                    
+                  </div>
+                </div>
+
+                <div class="alert-card" style="border-left:4px solid #ff9900">
+                  <div class="alert-header">
+                    <span class="badge" style="background:#ff9900">HIGH</span>
+                    <strong>Suspicious Process: /private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin) (PID 1140)</strong>
+                    <span class="ts">2026-05-30T20:27:40</span>
+                  </div>
+                  <div class="alert-body">
+                    <p>Process '/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin)' (PID 1140, user 'francescodichiara') flagged: Possible process name masquerade. Command: /private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visu...</p>
+                    <span class="tag">Suspicious Process</span>
+                    <span class="tag mitre">T1036 — Masquerading</span>
+                    <span class="tag">PID: 1140</span>
+                    
+                  </div>
+                </div>
+
+                <div class="alert-card" style="border-left:4px solid #ff9900">
+                  <div class="alert-header">
+                    <span class="badge" style="background:#ff9900">HIGH</span>
+                    <strong>Suspicious Process: /private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper.app/Contents/MacOS/Code Helper (PID 1142)</strong>
+                    <span class="ts">2026-05-30T20:27:40</span>
+                  </div>
+                  <div class="alert-body">
+                    <p>Process '/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper.app/Contents/MacOS/Code Helper' (PID 1142, user 'francescodichiara') flagged: Possible process name masquerade. Command: /private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visu...</p>
+                    <span class="tag">Suspicious Process</span>
+                    <span class="tag mitre">T1036 — Masquerading</span>
+                    <span class="tag">PID: 1142</span>
+                    
+                  </div>
+                </div>
+
+                <div class="alert-card" style="border-left:4px solid #ff9900">
+                  <div class="alert-header">
+                    <span class="badge" style="background:#ff9900">HIGH</span>
+                    <strong>Suspicious Process: /private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin) (PID 1153)</strong>
+                    <span class="ts">2026-05-30T20:27:40</span>
+                  </div>
+                  <div class="alert-body">
+                    <p>Process '/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin)' (PID 1153, user 'francescodichiara') flagged: Possible process name masquerade. Command: /private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visu...</p>
+                    <span class="tag">Suspicious Process</span>
+                    <span class="tag mitre">T1036 — Masquerading</span>
+                    <span class="tag">PID: 1153</span>
+                    
+                  </div>
+                </div>
+
+                <div class="alert-card" style="border-left:4px solid #ff9900">
+                  <div class="alert-header">
+                    <span class="badge" style="background:#ff9900">HIGH</span>
+                    <strong>Suspicious Process: /private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin) (PID 1203)</strong>
+                    <span class="ts">2026-05-30T20:27:40</span>
+                  </div>
+                  <div class="alert-body">
+                    <p>Process '/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin)' (PID 1203, user 'francescodichiara') flagged: Possible process name masquerade. Command: /private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visu...</p>
+                    <span class="tag">Suspicious Process</span>
+                    <span class="tag mitre">T1036 — Masquerading</span>
+                    <span class="tag">PID: 1203</span>
+                    
+                  </div>
+                </div>
+
+                <div class="alert-card" style="border-left:4px solid #ff9900">
+                  <div class="alert-header">
+                    <span class="badge" style="background:#ff9900">HIGH</span>
+                    <strong>Suspicious Process: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome (PID 1432)</strong>
+                    <span class="ts">2026-05-30T20:27:40</span>
+                  </div>
+                  <div class="alert-body">
+                    <p>Process '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' (PID 1432, user 'francescodichiara') flagged: Possible process name masquerade. Command: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome</p>
+                    <span class="tag">Suspicious Process</span>
+                    <span class="tag mitre">T1036 — Masquerading</span>
+                    <span class="tag">PID: 1432</span>
+                    
+                  </div>
+                </div>
+
+                <div class="alert-card" style="border-left:4px solid #ff9900">
+                  <div class="alert-header">
+                    <span class="badge" style="background:#ff9900">HIGH</span>
+                    <strong>Suspicious Process: /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers/chrome_crashpad_handler (PID 1436)</strong>
+                    <span class="ts">2026-05-30T20:27:40</span>
+                  </div>
+                  <div class="alert-body">
+                    <p>Process '/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers/chrome_crashpad_handler' (PID 1436, user 'francescodichiara') flagged: Possible process name masquerade. Command: /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers...</p>
+                    <span class="tag">Suspicious Process</span>
+                    <span class="tag mitre">T1036 — Masquerading</span>
+                    <span class="tag">PID: 1436</span>
+                    
+                  </div>
+                </div>
+
+                <div class="alert-card" style="border-left:4px solid #ff9900">
+                  <div class="alert-header">
+                    <span class="badge" style="background:#ff9900">HIGH</span>
+                    <strong>Suspicious Process: /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper (PID 1440)</strong>
+                    <span class="ts">2026-05-30T20:27:40</span>
+                  </div>
+                  <div class="alert-body">
+                    <p>Process '/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper' (PID 1440, user 'francescodichiara') flagged: Possible process name masquerade. Command: /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers...</p>
+                    <span class="tag">Suspicious Process</span>
+                    <span class="tag mitre">T1036 — Masquerading</span>
+                    <span class="tag">PID: 1440</span>
+                    
+                  </div>
+                </div>
+
+                <div class="alert-card" style="border-left:4px solid #ff9900">
+                  <div class="alert-header">
+                    <span class="badge" style="background:#ff9900">HIGH</span>
+                    <strong>Suspicious Process: /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper (PID 1441)</strong>
+                    <span class="ts">2026-05-30T20:27:40</span>
+                  </div>
+                  <div class="alert-body">
+                    <p>Process '/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper' (PID 1441, user 'francescodichiara') flagged: Possible process name masquerade. Command: /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers...</p>
+                    <span class="tag">Suspicious Process</span>
+                    <span class="tag mitre">T1036 — Masquerading</span>
+                    <span class="tag">PID: 1441</span>
+                    
+                  </div>
+                </div>
+
+                <div class="alert-card" style="border-left:4px solid #ff9900">
+                  <div class="alert-header">
+                    <span class="badge" style="background:#ff9900">HIGH</span>
+                    <strong>Suspicious Process: /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper (PID 1442)</strong>
+                    <span class="ts">2026-05-30T20:27:40</span>
+                  </div>
+                  <div class="alert-body">
+                    <p>Process '/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper' (PID 1442, user 'francescodichiara') flagged: Possible process name masquerade. Command: /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers...</p>
+                    <span class="tag">Suspicious Process</span>
+                    <span class="tag mitre">T1036 — Masquerading</span>
+                    <span class="tag">PID: 1442</span>
+                    
+                  </div>
+                </div>
+
+                <div class="alert-card" style="border-left:4px solid #ff9900">
+                  <div class="alert-header">
+                    <span class="badge" style="background:#ff9900">HIGH</span>
+                    <strong>Suspicious Process: /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer) (PID 1454)</strong>
+                    <span class="ts">2026-05-30T20:27:40</span>
+                  </div>
+                  <div class="alert-body">
+                    <p>Process '/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)' (PID 1454, user 'francescodichiara') flagged: Possible process name masquerade. Command: /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers...</p>
+                    <span class="tag">Suspicious Process</span>
+                    <span class="tag mitre">T1036 — Masquerading</span>
+                    <span class="tag">PID: 1454</span>
+                    
+                  </div>
+                </div>
+
+                <div class="alert-card" style="border-left:4px solid #ff9900">
+                  <div class="alert-header">
+                    <span class="badge" style="background:#ff9900">HIGH</span>
+                    <strong>Suspicious Process: /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer) (PID 1460)</strong>
+                    <span class="ts">2026-05-30T20:27:40</span>
+                  </div>
+                  <div class="alert-body">
+                    <p>Process '/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)' (PID 1460, user 'francescodichiara') flagged: Possible process name masquerade. Command: /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers...</p>
+                    <span class="tag">Suspicious Process</span>
+                    <span class="tag mitre">T1036 — Masquerading</span>
+                    <span class="tag">PID: 1460</span>
+                    
+                  </div>
+                </div>
+
+                <div class="alert-card" style="border-left:4px solid #ff9900">
+                  <div class="alert-header">
+                    <span class="badge" style="background:#ff9900">HIGH</span>
+                    <strong>Suspicious Process: /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper (PID 1462)</strong>
+                    <span class="ts">2026-05-30T20:27:40</span>
+                  </div>
+                  <div class="alert-body">
+                    <p>Process '/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper' (PID 1462, user 'francescodichiara') flagged: Possible process name masquerade. Command: /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers...</p>
+                    <span class="tag">Suspicious Process</span>
+                    <span class="tag mitre">T1036 — Masquerading</span>
+                    <span class="tag">PID: 1462</span>
+                    
+                  </div>
+                </div>
+
+                <div class="alert-card" style="border-left:4px solid #ff9900">
+                  <div class="alert-header">
+                    <span class="badge" style="background:#ff9900">HIGH</span>
+                    <strong>Suspicious Process: /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper (PID 1463)</strong>
+                    <span class="ts">2026-05-30T20:27:40</span>
+                  </div>
+                  <div class="alert-body">
+                    <p>Process '/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper' (PID 1463, user 'francescodichiara') flagged: Possible process name masquerade. Command: /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers...</p>
+                    <span class="tag">Suspicious Process</span>
+                    <span class="tag mitre">T1036 — Masquerading</span>
+                    <span class="tag">PID: 1463</span>
+                    
+                  </div>
+                </div>
+
+                <div class="alert-card" style="border-left:4px solid #ff9900">
+                  <div class="alert-header">
+                    <span class="badge" style="background:#ff9900">HIGH</span>
+                    <strong>Suspicious Process: /var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/25E0FAA3-5191-453D-B6B1-B8C79645CADD/d/UTM.app/Contents/XPCServices/QEMUHelper.xpc/Contents/MacOS/QEMULauncher.app/Contents/MacOS/QEMULauncher (PID 1911)</strong>
+                    <span class="ts">2026-05-30T20:27:40</span>
+                  </div>
+                  <div class="alert-body">
+                    <p>Process '/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/25E0FAA3-5191-453D-B6B1-B8C79645CADD/d/UTM.app/Contents/XPCServices/QEMUHelper.xpc/Contents/MacOS/QEMULauncher.app/Contents/MacOS/QEMULauncher' (PID 1911, user 'francescodichiara') flagged: High memory usage: 2379 MB. Command: /var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/25E0FAA3-5191-453D-B6B1-B8C79645CADD/d/UTM.app/Cont...</p>
+                    <span class="tag">Suspicious Process</span>
+                    <span class="tag mitre">T1059 — Command and Scripting Interpreter</span>
+                    <span class="tag">PID: 1911</span>
+                    
+                  </div>
+                </div>
+
+                <div class="alert-card" style="border-left:4px solid #ff9900">
+                  <div class="alert-header">
+                    <span class="badge" style="background:#ff9900">HIGH</span>
+                    <strong>Unexpected SUID Binary: write</strong>
+                    <span class="ts">2026-05-30T20:27:41</span>
+                  </div>
+                  <div class="alert-body">
+                    <p>Binary '/usr/bin/write' has SGID bit set and is not in the known-good whitelist. Could be used for privilege escalation.</p>
+                    <span class="tag">Privilege Escalation</span>
+                    <span class="tag mitre">T1548.001 — Abuse Elevation Control Mechanism: Setuid/Setgid</span>
+                    
+                    <span class="tag">Path: /usr/bin/write</span>
+                  </div>
+                </div>
+
+                <div class="alert-card" style="border-left:4px solid #ff9900">
+                  <div class="alert-header">
+                    <span class="badge" style="background:#ff9900">HIGH</span>
+                    <strong>Unexpected SUID Binary: top</strong>
+                    <span class="ts">2026-05-30T20:27:41</span>
+                  </div>
+                  <div class="alert-body">
+                    <p>Binary '/usr/bin/top' has SUID bit set and is not in the known-good whitelist. Could be used for privilege escalation.</p>
+                    <span class="tag">Privilege Escalation</span>
+                    <span class="tag mitre">T1548.001 — Abuse Elevation Control Mechanism: Setuid/Setgid</span>
+                    
+                    <span class="tag">Path: /usr/bin/top</span>
+                  </div>
+                </div>
+
+                <div class="alert-card" style="border-left:4px solid #ff9900">
+                  <div class="alert-header">
+                    <span class="badge" style="background:#ff9900">HIGH</span>
+                    <strong>Unexpected SUID Binary: atq</strong>
+                    <span class="ts">2026-05-30T20:27:41</span>
+                  </div>
+                  <div class="alert-body">
+                    <p>Binary '/usr/bin/atq' has SUID bit set and is not in the known-good whitelist. Could be used for privilege escalation.</p>
+                    <span class="tag">Privilege Escalation</span>
+                    <span class="tag mitre">T1548.001 — Abuse Elevation Control Mechanism: Setuid/Setgid</span>
+                    
+                    <span class="tag">Path: /usr/bin/atq</span>
+                  </div>
+                </div>
+
+                <div class="alert-card" style="border-left:4px solid #ff9900">
+                  <div class="alert-header">
+                    <span class="badge" style="background:#ff9900">HIGH</span>
+                    <strong>Unexpected SUID Binary: crontab</strong>
+                    <span class="ts">2026-05-30T20:27:41</span>
+                  </div>
+                  <div class="alert-body">
+                    <p>Binary '/usr/bin/crontab' has SUID bit set and is not in the known-good whitelist. Could be used for privilege escalation.</p>
+                    <span class="tag">Privilege Escalation</span>
+                    <span class="tag mitre">T1548.001 — Abuse Elevation Control Mechanism: Setuid/Setgid</span>
+                    
+                    <span class="tag">Path: /usr/bin/crontab</span>
+                  </div>
+                </div>
+
+                <div class="alert-card" style="border-left:4px solid #ff9900">
+                  <div class="alert-header">
+                    <span class="badge" style="background:#ff9900">HIGH</span>
+                    <strong>Unexpected SUID Binary: atrm</strong>
+                    <span class="ts">2026-05-30T20:27:41</span>
+                  </div>
+                  <div class="alert-body">
+                    <p>Binary '/usr/bin/atrm' has SUID bit set and is not in the known-good whitelist. Could be used for privilege escalation.</p>
+                    <span class="tag">Privilege Escalation</span>
+                    <span class="tag mitre">T1548.001 — Abuse Elevation Control Mechanism: Setuid/Setgid</span>
+                    
+                    <span class="tag">Path: /usr/bin/atrm</span>
+                  </div>
+                </div>
+
+                <div class="alert-card" style="border-left:4px solid #ff9900">
+                  <div class="alert-header">
+                    <span class="badge" style="background:#ff9900">HIGH</span>
+                    <strong>Unexpected SUID Binary: batch</strong>
+                    <span class="ts">2026-05-30T20:27:41</span>
+                  </div>
+                  <div class="alert-body">
+                    <p>Binary '/usr/bin/batch' has SUID bit set and is not in the known-good whitelist. Could be used for privilege escalation.</p>
+                    <span class="tag">Privilege Escalation</span>
+                    <span class="tag mitre">T1548.001 — Abuse Elevation Control Mechanism: Setuid/Setgid</span>
+                    
+                    <span class="tag">Path: /usr/bin/batch</span>
+                  </div>
+                </div>
+
+                <div class="alert-card" style="border-left:4px solid #ff9900">
+                  <div class="alert-header">
+                    <span class="badge" style="background:#ff9900">HIGH</span>
+                    <strong>Unexpected SUID Binary: at</strong>
+                    <span class="ts">2026-05-30T20:27:41</span>
+                  </div>
+                  <div class="alert-body">
+                    <p>Binary '/usr/bin/at' has SUID bit set and is not in the known-good whitelist. Could be used for privilege escalation.</p>
+                    <span class="tag">Privilege Escalation</span>
+                    <span class="tag mitre">T1548.001 — Abuse Elevation Control Mechanism: Setuid/Setgid</span>
+                    
+                    <span class="tag">Path: /usr/bin/at</span>
+                  </div>
+                </div>
+
+                <div class="alert-card" style="border-left:4px solid #ff9900">
+                  <div class="alert-header">
+                    <span class="badge" style="background:#ff9900">HIGH</span>
+                    <strong>Unexpected SUID Binary: quota</strong>
+                    <span class="ts">2026-05-30T20:27:41</span>
+                  </div>
+                  <div class="alert-body">
+                    <p>Binary '/usr/bin/quota' has SUID bit set and is not in the known-good whitelist. Could be used for privilege escalation.</p>
+                    <span class="tag">Privilege Escalation</span>
+                    <span class="tag mitre">T1548.001 — Abuse Elevation Control Mechanism: Setuid/Setgid</span>
+                    
+                    <span class="tag">Path: /usr/bin/quota</span>
+                  </div>
+                </div>
+
+                <div class="alert-card" style="border-left:4px solid #ff9900">
+                  <div class="alert-header">
+                    <span class="badge" style="background:#ff9900">HIGH</span>
+                    <strong>Unexpected SUID Binary: login</strong>
+                    <span class="ts">2026-05-30T20:27:41</span>
+                  </div>
+                  <div class="alert-body">
+                    <p>Binary '/usr/bin/login' has SUID bit set and is not in the known-good whitelist. Could be used for privilege escalation.</p>
+                    <span class="tag">Privilege Escalation</span>
+                    <span class="tag mitre">T1548.001 — Abuse Elevation Control Mechanism: Setuid/Setgid</span>
+                    
+                    <span class="tag">Path: /usr/bin/login</span>
+                  </div>
+                </div>
+
+                <div class="alert-card" style="border-left:4px solid #ff9900">
+                  <div class="alert-header">
+                    <span class="badge" style="background:#ff9900">HIGH</span>
+                    <strong>Unexpected SUID Binary: security_authtrampoline</strong>
+                    <span class="ts">2026-05-30T20:27:41</span>
+                  </div>
+                  <div class="alert-body">
+                    <p>Binary '/usr/libexec/security_authtrampoline' has SUID bit set and is not in the known-good whitelist. Could be used for privilege escalation.</p>
+                    <span class="tag">Privilege Escalation</span>
+                    <span class="tag mitre">T1548.001 — Abuse Elevation Control Mechanism: Setuid/Setgid</span>
+                    
+                    <span class="tag">Path: /usr/libexec/security_authtrampoline</span>
+                  </div>
+                </div>
+  </div>
+
+  
+            <div class="section">
+              <h2>SSH Agent Sockets</h2>
+              <table>
+                <thead><tr><th>path</th><th>owner</th><th>permissions</th><th>risk</th><th>accessing_pids</th></tr></thead>
+                <tbody><tr><td>/var/run/mDNSResponder</td><td>root</td><td>0o666</td><td>HIGH</td><td></td></tr><tr><td>/var/run/syslog</td><td>root</td><td>0o666</td><td>HIGH</td><td></td></tr><tr><td>/var/run/vpncontrol.sock</td><td>root</td><td>0o600</td><td>HIGH</td><td></td></tr><tr><td>/var/run/cupsd</td><td>root</td><td>0o777</td><td>HIGH</td><td></td></tr><tr><td>/var/run/pppconfd</td><td>root</td><td>0o777</td><td>HIGH</td><td></td></tr><tr><td>/var/run/portmap.socket</td><td>root</td><td>0o777</td><td>HIGH</td><td></td></tr><tr><td>/var/run/systemkeychaincheck.socket</td><td>root</td><td>0o666</td><td>HIGH</td><td></td></tr><tr><td>/var/run/usbmuxd</td><td>root</td><td>0o777</td><td>HIGH</td><td></td></tr><tr><td>/var/run/.sim_diagnosticd_socket</td><td>root</td><td>0o777</td><td>HIGH</td><td></td></tr><tr><td>/var/run/filesystemui.socket</td><td>francescodichiara</td><td>0o644</td><td>LOW</td><td></td></tr><tr><td>/var/run/com.apple.launchd.XP62C2YaN9/Listeners</td><td>francescodichiara</td><td>0o666</td><td>CRITICAL</td><td>400,581,589,608,612,615,618,619,623,624,628,635,641,650,651,653,664,673,685,690,691,730,746,769,783,803,828,832,837,885,886,899,913,917,929,938,1061,1097,1111,1140,1153,1203,1432,1473,1818,1904,1911</td></tr><tr><td>/Users/francescodichiara/.ssh/agent/s.coeWVMlEmb.agent.XQ7bnJPmyx</td><td>francescodichiara</td><td>0o600</td><td>CRITICAL</td><td>400,581,589,608,612,615,618,619,623,624,628,635,641,650,651,653,664,673,685,690,691,730,746,769,783,803,828,832,837,885,886,899,913,917,929,938,1061,1097,1111,1140,1153,1203,1432,1473,1818,1904,1911</td></tr></tbody>
+              </table>
+            </div>
+  
+            <div class="section">
+              <h2>Flagged Processes</h2>
+              <table>
+                <thead><tr><th>pid</th><th>name</th><th>user</th><th>severity</th><th>reasons</th><th>command</th></tr></thead>
+                <tbody><tr><td>479</td><td>Core Audio Driver (ParrotAudioPlugin.driver)</td><td>_coreaudiod</td><td>HIGH</td><td>Possible process name masquerade</td><td>Core Audio Driver (ParrotAudioPlugin.driver)</td></tr><tr><td>552</td><td>/System/Library/CoreServices/Software Update.app/Contents/Resources/suhelperd</td><td>root</td><td>HIGH</td><td>Possible process name masquerade</td><td>/System/Library/CoreServices/Software Update.app/Contents/Resources/suhelperd</td></tr><tr><td>556</td><td>/System/Library/CoreServices/Software Update.app/Contents/Resources/softwareupdated</td><td>_softwareupdate</td><td>HIGH</td><td>Possible process name masquerade</td><td>/System/Library/CoreServices/Software Update.app/Contents/Resources/softwareupdated</td></tr><tr><td>732</td><td>/System/Library/Input Methods/PressAndHold.app/Contents/PlugIns/PAH_Extension.appex/Contents/MacOS/PAH_Extension</td><td>francescodichiara</td><td>HIGH</td><td>Possible process name masquerade</td><td>/System/Library/Input Methods/PressAndHold.app/Contents/PlugIns/PAH_Extension.appex/Contents/MacOS/P</td></tr><tr><td>746</td><td>/System/Library/Image Capture/Support/icdd</td><td>francescodichiara</td><td>HIGH</td><td>Possible process name masquerade</td><td>/System/Library/Image Capture/Support/icdd</td></tr><tr><td>778</td><td>/Applications/Spotify.app/Contents/Frameworks/Spotify Helper.app/Contents/MacOS/Spotify Helper</td><td>francescodichiara</td><td>HIGH</td><td>Possible process name masquerade</td><td>/Applications/Spotify.app/Contents/Frameworks/Spotify Helper.app/Contents/MacOS/Spotify Helper --mon</td></tr><tr><td>782</td><td>/Applications/Spotify.app/Contents/Frameworks/Spotify Helper.app/Contents/MacOS/Spotify Helper</td><td>francescodichiara</td><td>HIGH</td><td>Possible process name masquerade</td><td>/Applications/Spotify.app/Contents/Frameworks/Spotify Helper.app/Contents/MacOS/Spotify Helper --typ</td></tr><tr><td>783</td><td>/Applications/Spotify.app/Contents/Frameworks/Spotify Helper.app/Contents/MacOS/Spotify Helper</td><td>francescodichiara</td><td>HIGH</td><td>Possible process name masquerade</td><td>/Applications/Spotify.app/Contents/Frameworks/Spotify Helper.app/Contents/MacOS/Spotify Helper --typ</td></tr><tr><td>789</td><td>/Applications/Spotify.app/Contents/Frameworks/Spotify Helper.app/Contents/MacOS/Spotify Helper</td><td>francescodichiara</td><td>HIGH</td><td>Possible process name masquerade</td><td>/Applications/Spotify.app/Contents/Frameworks/Spotify Helper.app/Contents/MacOS/Spotify Helper --typ</td></tr><tr><td>816</td><td>/Applications/Spotify.app/Contents/Frameworks/Spotify Helper (Renderer).app/Contents/MacOS/Spotify Helper (Renderer)</td><td>francescodichiara</td><td>HIGH</td><td>Possible process name masquerade</td><td>/Applications/Spotify.app/Contents/Frameworks/Spotify Helper (Renderer).app/Contents/MacOS/Spotify H</td></tr><tr><td>850</td><td>/Applications/Spotify.app/Contents/Frameworks/Spotify Helper.app/Contents/MacOS/Spotify Helper</td><td>francescodichiara</td><td>HIGH</td><td>Possible process name masquerade</td><td>/Applications/Spotify.app/Contents/Frameworks/Spotify Helper.app/Contents/MacOS/Spotify Helper --typ</td></tr><tr><td>944</td><td>/System/Library/CoreServices/Keychain Circle Notification.app/Contents/MacOS/Keychain Circle Notification</td><td>francescodichiara</td><td>HIGH</td><td>Possible process name masquerade</td><td>/System/Library/CoreServices/Keychain Circle Notification.app/Contents/MacOS/Keychain Circle Notific</td></tr><tr><td>1061</td><td>/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/MacOS/Electron</td><td>francescodichiara</td><td>HIGH</td><td>Possible process name masquerade</td><td>/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F4</td></tr><tr><td>1070</td><td>/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Electron Framework.framework/Helpers/chrome_crashpad_handler</td><td>francescodichiara</td><td>HIGH</td><td>Possible process name masquerade</td><td>/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC51</td></tr><tr><td>1071</td><td>/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper (GPU).app/Contents/MacOS/Code Helper (GPU)</td><td>francescodichiara</td><td>HIGH</td><td>Possible process name masquerade</td><td>/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F4</td></tr><tr><td>1072</td><td>/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper.app/Contents/MacOS/Code Helper</td><td>francescodichiara</td><td>HIGH</td><td>Possible process name masquerade</td><td>/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F4</td></tr><tr><td>1082</td><td>/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper (Renderer).app/Contents/MacOS/Code Helper (Renderer)</td><td>francescodichiara</td><td>HIGH</td><td>Possible process name masquerade</td><td>/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F4</td></tr><tr><td>1095</td><td>/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper.app/Contents/MacOS/Code Helper</td><td>francescodichiara</td><td>HIGH</td><td>Possible process name masquerade</td><td>/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F4</td></tr><tr><td>1096</td><td>/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper.app/Contents/MacOS/Code Helper</td><td>francescodichiara</td><td>HIGH</td><td>Possible process name masquerade</td><td>/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F4</td></tr><tr><td>1097</td><td>/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin)</td><td>francescodichiara</td><td>HIGH</td><td>Possible process name masquerade</td><td>/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F4</td></tr><tr><td>1140</td><td>/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin)</td><td>francescodichiara</td><td>HIGH</td><td>Possible process name masquerade</td><td>/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F4</td></tr><tr><td>1142</td><td>/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper.app/Contents/MacOS/Code Helper</td><td>francescodichiara</td><td>HIGH</td><td>Possible process name masquerade</td><td>/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F4</td></tr><tr><td>1153</td><td>/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin)</td><td>francescodichiara</td><td>HIGH</td><td>Possible process name masquerade</td><td>/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F4</td></tr><tr><td>1203</td><td>/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F45775CC518C/d/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin)</td><td>francescodichiara</td><td>HIGH</td><td>Possible process name masquerade</td><td>/private/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/A2958F13-91EF-4031-987E-F4</td></tr><tr><td>1432</td><td>/Applications/Google Chrome.app/Contents/MacOS/Google Chrome</td><td>francescodichiara</td><td>HIGH</td><td>Possible process name masquerade</td><td>/Applications/Google Chrome.app/Contents/MacOS/Google Chrome</td></tr><tr><td>1436</td><td>/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers/chrome_crashpad_handler</td><td>francescodichiara</td><td>HIGH</td><td>Possible process name masquerade</td><td>/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0</td></tr><tr><td>1440</td><td>/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper</td><td>francescodichiara</td><td>HIGH</td><td>Possible process name masquerade</td><td>/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0</td></tr><tr><td>1441</td><td>/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper</td><td>francescodichiara</td><td>HIGH</td><td>Possible process name masquerade</td><td>/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0</td></tr><tr><td>1442</td><td>/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper</td><td>francescodichiara</td><td>HIGH</td><td>Possible process name masquerade</td><td>/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0</td></tr><tr><td>1454</td><td>/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)</td><td>francescodichiara</td><td>HIGH</td><td>Possible process name masquerade</td><td>/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0</td></tr><tr><td>1460</td><td>/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)</td><td>francescodichiara</td><td>HIGH</td><td>Possible process name masquerade</td><td>/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0</td></tr><tr><td>1462</td><td>/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper</td><td>francescodichiara</td><td>HIGH</td><td>Possible process name masquerade</td><td>/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0</td></tr><tr><td>1463</td><td>/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0.7778.179/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper</td><td>francescodichiara</td><td>HIGH</td><td>Possible process name masquerade</td><td>/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/148.0</td></tr><tr><td>1911</td><td>/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/25E0FAA3-5191-453D-B6B1-B8C79645CADD/d/UTM.app/Contents/XPCServices/QEMUHelper.xpc/Contents/MacOS/QEMULauncher.app/Contents/MacOS/QEMULauncher</td><td>francescodichiara</td><td>HIGH</td><td>High memory usage: 2379 MB</td><td>/var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/AppTranslocation/25E0FAA3-5191-453D-B6B1-B8C79645CA</td></tr></tbody>
+              </table>
+            </div>
+  
+            <div class="section">
+              <h2>Network Connections</h2>
+              <table>
+                <thead><tr><th>proto</th><th>state</th><th>local</th><th>remote</th><th>process</th><th>risk</th><th>flags</th></tr></thead>
+                <tbody><tr><td>4d9e11c7ffb3816</td><td>76bf7081f1494300</td><td>0</td><td>0</td><td>var/run/mDNSResponder/</td><td>LOW</td><td></td></tr><tr><td>76bf7081f1494300</td><td>4d9e11c7ffb3816</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>b593c94671879765</td><td>d0ac204778e699be</td><td>0</td><td>0</td><td>var/run/mDNSResponder/</td><td>LOW</td><td></td></tr><tr><td>d0ac204778e699be</td><td>b593c94671879765</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>9fff44d64db88898</td><td>83e3424e2626f5e4</td><td>0</td><td>0</td><td>var/run/mDNSResponder/</td><td>LOW</td><td></td></tr><tr><td>83e3424e2626f5e4</td><td>9fff44d64db88898</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>fa2b967caa52bad7</td><td>3a9a38475625934c</td><td>0</td><td>0</td><td>var/run/mDNSResponder/</td><td>LOW</td><td></td></tr><tr><td>3a9a38475625934c</td><td>fa2b967caa52bad7</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>ff671b4bc55cdf82</td><td>1fdda921d40c2e56</td><td>0</td><td>0</td><td>var/run/mDNSResponder/</td><td>LOW</td><td></td></tr><tr><td>1fdda921d40c2e56</td><td>ff671b4bc55cdf82</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>7bf19dd1baca03b9</td><td>7468505579048a7c</td><td>0</td><td>0</td><td>var/run/mDNSResponder/</td><td>LOW</td><td></td></tr><tr><td>7468505579048a7c</td><td>7bf19dd1baca03b9</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>6a47fd802025ddd2</td><td>0</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>8ba330b1658aebd8</td><td>cdc068cb013e266b</td><td>0</td><td>0</td><td>var/run/mDNSResponder/</td><td>LOW</td><td></td></tr><tr><td>cdc068cb013e266b</td><td>8ba330b1658aebd8</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>c320637f17c415e1</td><td>a17fb913493c1c</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>a17fb913493c1c</td><td>c320637f17c415e1</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>9b35b40ddfefd345</td><td>2129d18386a1df89</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>2129d18386a1df89</td><td>9b35b40ddfefd345</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>c4e64c83777ff5a5</td><td>605b1e87ce2664c9</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>605b1e87ce2664c9</td><td>c4e64c83777ff5a5</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>5855ebf495fc59a4</td><td>1c6ca4c0b250f231</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>1c6ca4c0b250f231</td><td>5855ebf495fc59a4</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>838285b35d3cea3c</td><td>b124b0cbb8d28663</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>b124b0cbb8d28663</td><td>838285b35d3cea3c</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>6c8425d37c7feb94</td><td>627c1998c96e6c8c</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>627c1998c96e6c8c</td><td>6c8425d37c7feb94</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>2a6cd4020703a9fe</td><td>246e934924a6485e</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>246e934924a6485e</td><td>2a6cd4020703a9fe</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>33508c8b867222e6</td><td>3453a778fa6184a3</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>3453a778fa6184a3</td><td>33508c8b867222e6</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>d9cadaf7cda5cb03</td><td>44ec04c0306a0634</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>44ec04c0306a0634</td><td>d9cadaf7cda5cb03</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>aaecb603bf427c19</td><td>fb81508e4e330ae7</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>fb81508e4e330ae7</td><td>aaecb603bf427c19</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>bc077343b2b53337</td><td>1da984eb8d212fc1</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>1da984eb8d212fc1</td><td>bc077343b2b53337</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>41fdf52d7294289f</td><td>d7b02c394867d84</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>d7b02c394867d84</td><td>41fdf52d7294289f</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>32184e3c12425a1f</td><td>51a238ace72f2253</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>51a238ace72f2253</td><td>32184e3c12425a1f</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>e4e0959444aaae50</td><td>0</td><td>0</td><td>780dea217477917d</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>5341611c7270a71a</td><td>53e4ba9f0026b898</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>53e4ba9f0026b898</td><td>5341611c7270a71a</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>a9b399f04c81751</td><td>0</td><td>0</td><td>1960ac5f13d253d9</td><td>Users/francescodichiara/.ssh/agent/s.coeWVMlEmb.agent.XQ7bnJPmyx/</td><td>LOW</td><td></td></tr><tr><td>c843201f3cd392aa</td><td>38cf919d9a8e73f9</td><td>0</td><td>0</td><td>var/run/mDNSResponder/</td><td>LOW</td><td></td></tr><tr><td>38cf919d9a8e73f9</td><td>c843201f3cd392aa</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>943e1802cf4fe26a</td><td>9f333637e950ae01</td><td>0</td><td>0</td><td>var/run/mDNSResponder/</td><td>LOW</td><td></td></tr><tr><td>9f333637e950ae01</td><td>943e1802cf4fe26a</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>1f7f848c2e28efe9</td><td>0</td><td>0</td><td>f987d82d93369615</td><td>var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/com.google.Chrome.jik4HL/SingletonSocket/</td><td>LOW</td><td></td></tr><tr><td>8ce304cfe560127c</td><td>3b072ea394a7b6f</td><td>0</td><td>0</td><td>var/run/mDNSResponder/</td><td>LOW</td><td></td></tr><tr><td>3b072ea394a7b6f</td><td>8ce304cfe560127c</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>5c13cff26814019d</td><td>ebf7b805f007e2f4</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>ebf7b805f007e2f4</td><td>5c13cff26814019d</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>376450f16d374bb9</td><td>b4c7779b684bbd3a</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>b4c7779b684bbd3a</td><td>376450f16d374bb9</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>ad84488dc7dd9df6</td><td>fc11e15243757d1d</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>fc11e15243757d1d</td><td>ad84488dc7dd9df6</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>c532c914fbe9e2a4</td><td>cd44ad5878ee2c2a</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>cd44ad5878ee2c2a</td><td>c532c914fbe9e2a4</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>402b0877e53a3fb6</td><td>0</td><td>0</td><td>c3fcd2fcd71b2ea4</td><td>var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/vscode-git-475b271955.sock/</td><td>LOW</td><td></td></tr><tr><td>fe83a97942b2b7f1</td><td>b966d10b7e6ffa54</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>b966d10b7e6ffa54</td><td>fe83a97942b2b7f1</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>7b5217cbe51a5630</td><td>94522e9b6d9aedc6</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>94522e9b6d9aedc6</td><td>7b5217cbe51a5630</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>75b4728874ab3cd</td><td>5557abb764c735f8</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>5557abb764c735f8</td><td>75b4728874ab3cd</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>88e3b9f88cea8963</td><td>fde49c1b5fac0bd9</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>fde49c1b5fac0bd9</td><td>88e3b9f88cea8963</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>71256e8533afc983</td><td>9e81833dc13f89e</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>9e81833dc13f89e</td><td>71256e8533afc983</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>aabe2ee1ec7261ab</td><td>1da2748a5be2f544</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>1da2748a5be2f544</td><td>aabe2ee1ec7261ab</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>504d7294f8cb648d</td><td>309b9e12f49c96cb</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>309b9e12f49c96cb</td><td>504d7294f8cb648d</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>6c8696e804f5cddb</td><td>713b1835a126313c</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>713b1835a126313c</td><td>6c8696e804f5cddb</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>2d3659818d5720f8</td><td>85670e39c5c35367</td><td>0</td><td>0</td><td>var/run/mDNSResponder/</td><td>LOW</td><td></td></tr><tr><td>85670e39c5c35367</td><td>2d3659818d5720f8</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>f6261d00afb424e7</td><td>6cbb8b9d374a46f0</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>6cbb8b9d374a46f0</td><td>f6261d00afb424e7</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>15c1d7b9dd6e643b</td><td>5c9410da2c27ea3</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>5c9410da2c27ea3</td><td>15c1d7b9dd6e643b</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>9af46290df2ce0d7</td><td>6a5f12fc8a6fcce4</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>6a5f12fc8a6fcce4</td><td>9af46290df2ce0d7</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>8ccaafc479a7d8ee</td><td>0</td><td>0</td><td>46b382a23b0cc2de</td><td>Code/1.10-main.sock/Support</td><td>LOW</td><td></td></tr><tr><td>a48ffde45a19b537</td><td>f8165a65d35ca8b4</td><td>0</td><td>0</td><td>var/run/mDNSResponder/</td><td>LOW</td><td></td></tr><tr><td>f8165a65d35ca8b4</td><td>a48ffde45a19b537</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>c0d2543cb1f4e11</td><td>f2e222a19dc43af6</td><td>0</td><td>0</td><td>var/run/mDNSResponder/</td><td>LOW</td><td></td></tr><tr><td>f2e222a19dc43af6</td><td>c0d2543cb1f4e11</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>a2b28512895b9752</td><td>3ce3dc91a4e02423</td><td>0</td><td>0</td><td>var/run/usbmuxd/</td><td>LOW</td><td></td></tr><tr><td>3ce3dc91a4e02423</td><td>a2b28512895b9752</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>e75394c2f2b9ab09</td><td>8dec6dcb2010ef6a</td><td>0</td><td>0</td><td>var/run/mDNSResponder/</td><td>LOW</td><td></td></tr><tr><td>8dec6dcb2010ef6a</td><td>e75394c2f2b9ab09</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>c6d9a07842e821c6</td><td>f5aebd316500410e</td><td>0</td><td>0</td><td>var/run/mDNSResponder/</td><td>LOW</td><td></td></tr><tr><td>f5aebd316500410e</td><td>c6d9a07842e821c6</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>7ad7ee32f7720b99</td><td>be7b05fed8db86f7</td><td>0</td><td>0</td><td>var/run/mDNSResponder/</td><td>LOW</td><td></td></tr><tr><td>be7b05fed8db86f7</td><td>7ad7ee32f7720b99</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>db3881d94d3d1b37</td><td>7021ca89022adc06</td><td>0</td><td>0</td><td>var/run/mDNSResponder/</td><td>LOW</td><td></td></tr><tr><td>7021ca89022adc06</td><td>db3881d94d3d1b37</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>d5bc9e7329b29eb5</td><td>a35112f0ff6f77a2</td><td>0</td><td>0</td><td>var/run/mDNSResponder/</td><td>LOW</td><td></td></tr><tr><td>a35112f0ff6f77a2</td><td>d5bc9e7329b29eb5</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>7f89ddc6b469849f</td><td>0</td><td>0</td><td>54413e7701560243</td><td>var/folders/p7/8w6d4m612fg1c3s2_52hxwjr0000gn/T/com.spotify.client.GXIUQE/SingletonSocket/</td><td>LOW</td><td></td></tr><tr><td>39b77d0614926cab</td><td>229a1be9490e49a9</td><td>0</td><td>0</td><td>var/run/mDNSResponder/</td><td>LOW</td><td></td></tr><tr><td>229a1be9490e49a9</td><td>39b77d0614926cab</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>133c1552a83f18be</td><td>e62e72352ebae289</td><td>0</td><td>0</td><td>var/run/mDNSResponder/</td><td>LOW</td><td></td></tr><tr><td>e62e72352ebae289</td><td>133c1552a83f18be</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>a1ceb0f63b7497a0</td><td>62d454d50ef73241</td><td>0</td><td>0</td><td>var/run/mDNSResponder/</td><td>LOW</td><td></td></tr><tr><td>62d454d50ef73241</td><td>a1ceb0f63b7497a0</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>f7b41eba17e18514</td><td>5e4dd59b369da8e0</td><td>0</td><td>0</td><td>var/run/mDNSResponder/</td><td>LOW</td><td></td></tr><tr><td>5e4dd59b369da8e0</td><td>f7b41eba17e18514</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>1836b02318cbe14b</td><td>fae76a5de49b950f</td><td>0</td><td>0</td><td>var/run/mDNSResponder/</td><td>LOW</td><td></td></tr><tr><td>fae76a5de49b950f</td><td>1836b02318cbe14b</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>ad249555b12b145f</td><td>36925648008a3b48</td><td>0</td><td>0</td><td>var/run/mDNSResponder/</td><td>LOW</td><td></td></tr><tr><td>36925648008a3b48</td><td>ad249555b12b145f</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>33ca0b89b64819c7</td><td>e9f13063c79355b9</td><td>0</td><td>0</td><td>var/run/mDNSResponder/</td><td>LOW</td><td></td></tr><tr><td>e9f13063c79355b9</td><td>33ca0b89b64819c7</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>358315edc4e06e49</td><td>b8c41e7fc613591d</td><td>0</td><td>0</td><td>var/run/mDNSResponder/</td><td>LOW</td><td></td></tr><tr><td>8500913d3297b3b6</td><td>efa304b83d233f17</td><td>0</td><td>0</td><td>var/run/mDNSResponder/</td><td>LOW</td><td></td></tr><tr><td>efa304b83d233f17</td><td>8500913d3297b3b6</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>b8c41e7fc613591d</td><td>358315edc4e06e49</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>ca340aff75fff0e8</td><td>2f206a62589738a4</td><td>0</td><td>0</td><td>var/run/mDNSResponder/</td><td>LOW</td><td></td></tr><tr><td>2f206a62589738a4</td><td>ca340aff75fff0e8</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>8f419085f2e0680d</td><td>a93eda81a28ef635</td><td>0</td><td>0</td><td>var/run/mDNSResponder/</td><td>LOW</td><td></td></tr><tr><td>a93eda81a28ef635</td><td>8f419085f2e0680d</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>51592abd98383a34</td><td>73960152d5041dd5</td><td>0</td><td>0</td><td>var/run/mDNSResponder/</td><td>LOW</td><td></td></tr><tr><td>73960152d5041dd5</td><td>51592abd98383a34</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>4f9939ca8324a3c5</td><td>47c8051af402fa56</td><td>0</td><td>0</td><td>var/run/mDNSResponder/</td><td>LOW</td><td></td></tr><tr><td>47c8051af402fa56</td><td>4f9939ca8324a3c5</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>99e09a1dd49685eb</td><td>95f851dca9ca0e34</td><td>0</td><td>0</td><td>var/run/mDNSResponder/</td><td>LOW</td><td></td></tr><tr><td>95f851dca9ca0e34</td><td>99e09a1dd49685eb</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>e84b829ed742d647</td><td>ed6a1e3e836d42ef</td><td>0</td><td>0</td><td>var/run/usbmuxd/</td><td>LOW</td><td></td></tr><tr><td>ed6a1e3e836d42ef</td><td>e84b829ed742d647</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>b1a1373a6caea6ed</td><td>8479c76f9e9681f7</td><td>0</td><td>0</td><td>var/run/mDNSResponder/</td><td>LOW</td><td></td></tr><tr><td>8479c76f9e9681f7</td><td>b1a1373a6caea6ed</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>47bfba67ce9cc612</td><td>0</td><td>0</td><td>c3d2e4ccd4e3d0d9</td><td>var/run/filesystemui.socket/</td><td>LOW</td><td></td></tr><tr><td>5b693ed7b9d02512</td><td>0</td><td>0</td><td>536ebfa201cafd4a</td><td>var/run/com.apple.launchd.XP62C2YaN9/Listeners/</td><td>LOW</td><td></td></tr><tr><td>d03bc534b063c5e8</td><td>901c3d435e232d76</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>901c3d435e232d76</td><td>d03bc534b063c5e8</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>4f3d75002c961c9f</td><td>0</td><td>0</td><td>d0f82934137c407</td><td>var/run/pppconfd/</td><td>LOW</td><td></td></tr><tr><td>a3b229f73053ca57</td><td>0</td><td>0</td><td>f10b2946349c5bcd</td><td>var/run/usbmuxd/</td><td>LOW</td><td></td></tr><tr><td>b71fed99a069d30b</td><td>0</td><td>0</td><td>2048f6e0d7d71239</td><td>var/rpc/ncalrpc/srvsvc/</td><td>LOW</td><td></td></tr><tr><td>66c199e4c85c1200</td><td>0</td><td>0</td><td>b962e10cb88cad7a</td><td>var/rpc/ncacn_np/srvsvc/</td><td>LOW</td><td></td></tr><tr><td>d8370d6853d1c4e4</td><td>0</td><td>0</td><td>28636d3c6e12b22b</td><td>var/rpc/ncalrpc/wkssvc/</td><td>LOW</td><td></td></tr><tr><td>db5da3e771ed19b3</td><td>0</td><td>0</td><td>ca5de628bdffa30c</td><td>var/rpc/ncacn_np/wkssvc/</td><td>LOW</td><td></td></tr><tr><td>81240f94be8a37d1</td><td>0</td><td>0</td><td>14c3ef3f2e86fbbc</td><td>var/rpc/ncacn_np/mdssvc/</td><td>LOW</td><td></td></tr><tr><td>c0d99f0cade258b1</td><td>0</td><td>0</td><td>1f83e48e184e6770</td><td>var/rpc/ncalrpc/lsarpc/</td><td>LOW</td><td></td></tr><tr><td>2dfcd41c49efa420</td><td>0</td><td>0</td><td>b9f0b74135840d4e</td><td>var/rpc/ncacn_np/lsarpc/</td><td>LOW</td><td></td></tr><tr><td>983cb75c5ef5ecef</td><td>0</td><td>0</td><td>bb3666e5905a913f</td><td>var/run/mDNSResponder/</td><td>LOW</td><td></td></tr><tr><td>2383229b9bdaf3d0</td><td>0</td><td>0</td><td>46f8513a7df6e6cc</td><td>var/run/systemkeychaincheck.socket/</td><td>LOW</td><td></td></tr><tr><td>7bccff92078312cd</td><td>0</td><td>0</td><td>336a0443145088b8</td><td>private/var/run/.sim_diagnosticd_socket/</td><td>LOW</td><td></td></tr><tr><td>6d7a71971f0b5173</td><td>0</td><td>0</td><td>a15f49d8d6f3b0c4</td><td>var/run/portmap.socket/</td><td>LOW</td><td></td></tr><tr><td>759d24eb9c581130</td><td>0</td><td>0</td><td>c40cfa560f95e0dc</td><td>var/run/vpncontrol.sock/</td><td>LOW</td><td></td></tr><tr><td>a20259407704d1c</td><td>0</td><td>0</td><td>604c7b0f37f6d6d9</td><td>var/rpc/ncalrpc/NETLOGON/</td><td>LOW</td><td></td></tr><tr><td>4766417bc40e8a3d</td><td>0</td><td>0</td><td>58a344c21ffa233e</td><td>private/var/run/cupsd/</td><td>LOW</td><td></td></tr><tr><td>e4a1dd871ae3a9b2</td><td>f5dab2a0bb66e0bd</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>f5dab2a0bb66e0bd</td><td>e4a1dd871ae3a9b2</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>b115e502d73d2ffc</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>bcbe3d467842e5d5</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>54d1c728139e2bbd</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>406029517e45d284</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>e04fa0b314b4e916</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>691a0e8b5d2c3461</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>56cf047a7d2449c9</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>ee3bec36878994fc</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>aafb35755cdf2aa7</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>b8a8df0988faba2</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>cb049de985499c50</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>9f569e92b67a277b</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>9a9de9ff4aed4e16</td><td>d64b6363ca437ef0</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>d64b6363ca437ef0</td><td>9a9de9ff4aed4e16</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>20352b84f495839f</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>aae984b709eb8fa5</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>210474735c86754d</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>5c3e2621f8fbc82</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>e965f273a1d9666</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>9fcd100c5e2074fa</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>a56ddb9ca4091851</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>47eec18e410866e2</td><td>347fa8c46e86d3ce</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>347fa8c46e86d3ce</td><td>47eec18e410866e2</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>1ecaded56e695339</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>c81fcd08043682a0</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>dbed481da11419b</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>7c5bc8fd78152cb1</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>4512ac85b3b37b9b</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>46575d61abee6bb9</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>a2805559e2772a15</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>2383bd14b492ba3c</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>66f60aebc1631ceb</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>502778e3665b13a3</td><td>cff44ded449542e8</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>cff44ded449542e8</td><td>502778e3665b13a3</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>c03375e0f67d4f32</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>770d9972dabc0c83</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>6c4f9c8b6b37437f</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>cfc12db9d07f991c</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>cca107b3845129b3</td><td>b92c3739005e909b</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>b92c3739005e909b</td><td>cca107b3845129b3</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>a33b2c07e6a6c66d</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>d28bad1758c667a9</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>f17db6ae15aadf04</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>b68e02ae85ab1ab6</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>4e35be578f005cb5</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>fa71303b889f3d40</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>7a1dbe009dddaf60</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>b414c8d4a0158c0e</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>30a74e03eddc8b9a</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>4fde2f165f981c62</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>5f3f8d538362376a</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>55bb14963bda6f87</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>d5ca4ff56c2964ea</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>28d9e05c95c24a35</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>b9d7923eab05d1af</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>3f33032d19acbe9d</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>29fc19034a4b7c27</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>6c4abcebfb19804d</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>ec80c0bb9e52dab6</td><td>d49bcd743ab2b59b</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>d49bcd743ab2b59b</td><td>ec80c0bb9e52dab6</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>a90cc0902ba8116f</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>2b582ef7f2a97b16</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>d77ff022af7d2fa4</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>442f80048399f58e</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>960972070e6ab9d3</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>7df073f3d30b35b7</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>f7235d609e36e42d</td><td>57acf29244867afa</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>57acf29244867afa</td><td>f7235d609e36e42d</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>9ef142e4aae1fd26</td><td>f2ba5a39f2e32e6e</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>f2ba5a39f2e32e6e</td><td>9ef142e4aae1fd26</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>ad3184391919abe3</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>6aee1cec414cb23f</td><td>c954ca1ef73d4856</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>c954ca1ef73d4856</td><td>6aee1cec414cb23f</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>e323544578097fe4</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>86a4c37f4517f904</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>6e3243b981325e9</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>1ff2baeda882b45e</td><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>-/-</td><td>LOW</td><td></td></tr><tr><td>6b583108acf9ac23</td><td>0</td><td>0</td><td>3eb673ad628e1276</td><td>private//var/run/syslog/</td><td>LOW</td><td></td></tr></tbody>
+              </table>
+            </div>
+  
+            <div class="section">
+              <h2>File Integrity</h2>
+              <table>
+                <thead><tr><th>path</th><th>status</th><th>sha256</th><th>permissions</th><th>owner</th><th>modified</th><th>world_write</th></tr></thead>
+                <tbody><tr><td>/etc/passwd</td><td>NEW</td><td>5676bbb620dfd6c54c49...</td><td>0o644</td><td>root</td><td>2026-04-06 10:10:57</td><td>no</td></tr><tr><td>/etc/hosts</td><td>NEW</td><td>c7dd0e2ed261ce76d76f...</td><td>0o644</td><td>root</td><td>2026-04-06 10:10:57</td><td>no</td></tr><tr><td>/private/etc/sudoers</td><td>NO ACCESS</td><td>PERMISSION_DENIED...</td><td>0o440</td><td>root</td><td>2026-04-06 10:10:57</td><td>no</td></tr><tr><td>/etc/ssh/sshd_config</td><td>NEW</td><td>d98b8a857e705ed52978...</td><td>0o644</td><td>root</td><td>2025-01-15 11:52:07</td><td>no</td></tr><tr><td>/Library/LaunchDaemons</td><td>NO ACCESS</td><td>ERROR...</td><td>0o755</td><td>root</td><td>2026-04-13 18:44:06</td><td>no</td></tr><tr><td>/Library/LaunchAgents</td><td>NO ACCESS</td><td>ERROR...</td><td>0o755</td><td>root</td><td>2026-04-06 10:10:57</td><td>no</td></tr></tbody>
+              </table>
+            </div>
+
+  <footer>
+    SSHGuard v2.0 — Defensive use only. Unauthorized use is prohibited.
+  </footer>
+</div>
+</body>
+</html>

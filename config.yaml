@@ -1,0 +1,32 @@
+
+watch_interval: 10
+
+
+color: true
+
+
+modules:
+  ssh: true          # SSH agent socket hijack detection
+  processes: true    # Suspicious process detection
+  network: true      # Network connection anomaly detection
+  files: true        # File integrity monitoring (FIM)
+  privesc: true      # Privilege escalation vector detection
+  lateral: true      # Lateral movement indicator analysis
+
+
+# Path to the SHA-256 baseline file (relative to tool directory)
+baseline_file: .sshguard_baseline.json
+
+
+# Directory where exported reports are saved
+report_dir: ./reports
+
+
+thresholds:
+  cpu_high_pct: 80.0       # Flag process if CPU usage exceeds this %
+  cpu_critical_pct: 95.0
+  mem_high_mb: 500         # Flag process if memory exceeds this MB
+  conn_external_risk: MEDIUM   # Default risk for external connections
+
+
+log_file: null
